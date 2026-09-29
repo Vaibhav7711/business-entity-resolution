@@ -1,0 +1,1758 @@
+{
+  "run_id": "k1_filter_v1",
+  "decision": {
+    "retention_target": 0.998,
+    "chosen_k": 30,
+    "validation_retention": 0.9983350306322034,
+    "holdout_retention": 0.9984267841334513,
+    "transfer_retention": 0.988231591335167,
+    "validation_oracle_f05_at_k": 0.9918756297610409,
+    "validation_oracle_f05_no_filter": 0.9923861179941748,
+    "mean_kept_candidates": 30.0,
+    "projected_test_pairs": 51976320.0,
+    "projected_test_pairs_no_filter": 944467128.8576,
+    "gates": {
+      "validation_retention": true,
+      "holdout_retention": true,
+      "transfer_retention": false,
+      "k_at_most_max": true
+    },
+    "passed_k1_gates": false,
+    "pending_gate": "end-to-end matcher F0.5 with vs without filter within 0.001 (measured in K2)"
+  },
+  "by_split": {
+    "train": {
+      "all": {
+        "s1": 331000,
+        "retrieved_gold": 1119544,
+        "mean_candidates": 545.4977129909365,
+        "oracle_macro_f05_no_filter": 0.9920902178637512,
+        "curve": {
+          "10": {
+            "retention": 0.986647242091423,
+            "mean_kept_candidates": 10.0,
+            "oracle_macro_f05": 0.9883297683588969,
+            "positive_s1_all_gold_kept": 0.9569365437897122
+          },
+          "20": {
+            "retention": 0.9962368607218653,
+            "mean_kept_candidates": 20.0,
+            "oracle_macro_f05": 0.990934929194652,
+            "positive_s1_all_gold_kept": 0.9874232952182287
+          },
+          "30": {
+            "retention": 0.9982644719635851,
+            "mean_kept_candidates": 30.0,
+            "oracle_macro_f05": 0.9915421701678978,
+            "positive_s1_all_gold_kept": 0.9941099685822333
+          },
+          "40": {
+            "retention": 0.9990031655745554,
+            "mean_kept_candidates": 40.0,
+            "oracle_macro_f05": 0.9917786536319828,
+            "positive_s1_all_gold_kept": 0.9965990747435709
+          },
+          "50": {
+            "retention": 0.999313113196087,
+            "mean_kept_candidates": 50.0,
+            "oracle_macro_f05": 0.9918669493113524,
+            "positive_s1_all_gold_kept": 0.9976420678137458
+          },
+          "60": {
+            "retention": 0.9995283794116175,
+            "mean_kept_candidates": 60.0,
+            "oracle_macro_f05": 0.9919304619087342,
+            "positive_s1_all_gold_kept": 0.9983651243593271
+          },
+          "70": {
+            "retention": 0.9996275269216752,
+            "mean_kept_candidates": 70.0,
+            "oracle_macro_f05": 0.9919616018967498,
+            "positive_s1_all_gold_kept": 0.9987106558058881
+          },
+          "80": {
+            "retention": 0.999713276119563,
+            "mean_kept_candidates": 80.0,
+            "oracle_macro_f05": 0.9919912211718596,
+            "positive_s1_all_gold_kept": 0.999014595504252
+          },
+          "100": {
+            "retention": 0.9998195693961113,
+            "mean_kept_candidates": 100.0,
+            "oracle_macro_f05": 0.9920287519007931,
+            "positive_s1_all_gold_kept": 0.9993761237770427
+          },
+          "120": {
+            "retention": 0.9998820948529044,
+            "mean_kept_candidates": 120.0,
+            "oracle_macro_f05": 0.9920459398549262,
+            "positive_s1_all_gold_kept": 0.9995904812485203
+          },
+          "150": {
+            "retention": 0.9999294355559049,
+            "mean_kept_candidates": 150.0,
+            "oracle_macro_f05": 0.9920695111573282,
+            "positive_s1_all_gold_kept": 0.999750449510817
+          },
+          "200": {
+            "retention": 0.9999776694797168,
+            "mean_kept_candidates": 200.0,
+            "oracle_macro_f05": 0.9920812185648192,
+            "positive_s1_all_gold_kept": 0.9999200158688516
+          }
+        }
+      },
+      "India": {
+        "s1": 132487,
+        "curve": {
+          "10": {
+            "retention": 0.9837074558984729,
+            "mean_kept_candidates": 10.0,
+            "oracle_macro_f05": 0.9806964343432457,
+            "positive_s1_all_gold_kept": 0.9492411345817249
+          },
+          "20": {
+            "retention": 0.9948846086634848,
+            "mean_kept_candidates": 20.0,
+            "oracle_macro_f05": 0.9838560930855585,
+            "positive_s1_all_gold_kept": 0.9833521151525324
+          },
+          "30": {
+            "retention": 0.9975739337450157,
+            "mean_kept_candidates": 30.0,
+            "oracle_macro_f05": 0.9846742031882204,
+            "positive_s1_all_gold_kept": 0.9920077365110573
+          },
+          "40": {
+            "retention": 0.998592926961562,
+            "mean_kept_candidates": 40.0,
+            "oracle_macro_f05": 0.9850105767228949,
+            "positive_s1_all_gold_kept": 0.9953405103859464
+          },
+          "50": {
+            "retention": 0.9990717856891594,
+            "mean_kept_candidates": 50.0,
+            "oracle_macro_f05": 0.9851522261187006,
+            "positive_s1_all_gold_kept": 0.9969149862932681
+          },
+          "60": {
+            "retention": 0.9993963202770573,
+            "mean_kept_candidates": 60.0,
+            "oracle_macro_f05": 0.9852516390164908,
+            "positive_s1_all_gold_kept": 0.9979539805468307
+          },
+          "70": {
+            "retention": 0.9995392970535437,
+            "mean_kept_candidates": 70.0,
+            "oracle_macro_f05": 0.985300437799575,
+            "positive_s1_all_gold_kept": 0.9984335163561673
+          },
+          "80": {
+            "retention": 0.9996686569941743,
+            "mean_kept_candidates": 80.0,
+            "oracle_macro_f05": 0.9853425539798,
+            "positive_s1_all_gold_kept": 0.998889075375037
+          },
+          "100": {
+            "retention": 0.9998184421885886,
+            "mean_kept_candidates": 100.0,
+            "oracle_macro_f05": 0.985398628747051,
+            "positive_s1_all_gold_kept": 0.9993766034478625
+          },
+          "120": {
+            "retention": 0.9999024126763664,
+            "mean_kept_candidates": 120.0,
+            "oracle_macro_f05": 0.9854159180642078,
+            "positive_s1_all_gold_kept": 0.9996563326699754
+          },
+          "150": {
+            "retention": 0.9999523410745045,
+            "mean_kept_candidates": 150.0,
+            "oracle_macro_f05": 0.9854461399256559,
+            "positive_s1_all_gold_kept": 0.9998321624667322
+          },
+          "200": {
+            "retention": 0.9999886526367868,
+            "mean_kept_candidates": 200.0,
+            "oracle_macro_f05": 0.9854547957788627,
+            "positive_s1_all_gold_kept": 0.9999600386825553
+          }
+        },
+        "oracle_macro_f05_no_filter": 0.9854567484205081
+      },
+      "US": {
+        "s1": 198513,
+        "curve": {
+          "10": {
+            "retention": 0.9885552346176903,
+            "mean_kept_candidates": 10.0,
+            "oracle_macro_f05": 0.9934242333245744,
+            "positive_s1_all_gold_kept": 0.962073399096249
+          },
+          "20": {
+            "retention": 0.9971145050985915,
+            "mean_kept_candidates": 20.0,
+            "oracle_macro_f05": 0.9956593238669679,
+            "positive_s1_all_gold_kept": 0.9901408976691333
+          },
+          "30": {
+            "retention": 0.9987126480123374,
+            "mean_kept_candidates": 30.0,
+            "oracle_macro_f05": 0.9961258313953062,
+            "positive_s1_all_gold_kept": 0.9955132548375222
+          },
+          "40": {
+            "retention": 0.9992694203822876,
+            "mean_kept_candidates": 40.0,
+            "oracle_macro_f05": 0.9962956485162188,
+            "positive_s1_all_gold_kept": 0.9974391941997749
+          },
+          "50": {
+            "retention": 0.9994697406000475,
+            "mean_kept_candidates": 50.0,
+            "oracle_macro_f05": 0.9963483360801025,
+            "positive_s1_all_gold_kept": 0.9981274107585854
+          },
+          "60": {
+            "retention": 0.9996140889922568,
+            "mean_kept_candidates": 60.0,
+            "oracle_macro_f05": 0.9963878889211951,
+            "positive_s1_all_gold_kept": 0.9986395719186304
+          },
+          "70": {
+            "retention": 0.9996847902455838,
+            "mean_kept_candidates": 70.0,
+            "oracle_macro_f05": 0.996407243480638,
+            "positive_s1_all_gold_kept": 0.9988956524986529
+          },
+          "80": {
+            "retention": 0.9997422350139119,
+            "mean_kept_candidates": 80.0,
+            "oracle_macro_f05": 0.9964285223575471,
+            "positive_s1_all_gold_kept": 0.9990983829578374
+          },
+          "100": {
+            "retention": 0.9998203009811272,
+            "mean_kept_candidates": 100.0,
+            "oracle_macro_f05": 0.9964536768491333,
+            "positive_s1_all_gold_kept": 0.9993758035861952
+          },
+          "120": {
+            "retention": 0.9998689080927895,
+            "mean_kept_candidates": 120.0,
+            "oracle_macro_f05": 0.9964707971538784,
+            "positive_s1_all_gold_kept": 0.9995465239728768
+          },
+          "150": {
+            "retention": 0.9999145693188966,
+            "mean_kept_candidates": 150.0,
+            "oracle_macro_f05": 0.9964899298924771,
+            "positive_s1_all_gold_kept": 0.9996959043112232
+          },
+          "200": {
+            "retention": 0.9999705411444471,
+            "mean_kept_candidates": 200.0,
+            "oracle_macro_f05": 0.9965036738984396,
+            "positive_s1_all_gold_kept": 0.999893299758324
+          }
+        },
+        "oracle_macro_f05_no_filter": 0.9965173761159912
+      }
+    },
+    "validation": {
+      "all": {
+        "s1": 55000,
+        "retrieved_gold": 185589,
+        "mean_candidates": 545.1331272727273,
+        "oracle_macro_f05_no_filter": 0.9923861179941748,
+        "curve": {
+          "10": {
+            "retention": 0.9865185975461908,
+            "mean_kept_candidates": 10.0,
+            "oracle_macro_f05": 0.9885618632324092,
+            "positive_s1_all_gold_kept": 0.9560877858918284
+          },
+          "20": {
+            "retention": 0.9963521544919149,
+            "mean_kept_candidates": 20.0,
+            "oracle_macro_f05": 0.9913357846053653,
+            "positive_s1_all_gold_kept": 0.9877839650089597
+          },
+          "30": {
+            "retention": 0.9983350306322034,
+            "mean_kept_candidates": 30.0,
+            "oracle_macro_f05": 0.9918756297610409,
+            "positive_s1_all_gold_kept": 0.9943929555482764
+          },
+          "40": {
+            "retention": 0.9989762324275684,
+            "mean_kept_candidates": 40.0,
+            "oracle_macro_f05": 0.9920460150241793,
+            "positive_s1_all_gold_kept": 0.9965317250814081
+          },
+          "50": {
+            "retention": 0.9992887509496792,
+            "mean_kept_candidates": 50.0,
+            "oracle_macro_f05": 0.9921752232819003,
+            "positive_s1_all_gold_kept": 0.9975336711690014
+          },
+          "60": {
+            "retention": 0.9994881162137842,
+            "mean_kept_candidates": 60.0,
+            "oracle_macro_f05": 0.992232866371948,
+            "positive_s1_all_gold_kept": 0.9982465943467119
+          },
+          "70": {
+            "retention": 0.9996497637252207,
+            "mean_kept_candidates": 70.0,
+            "oracle_macro_f05": 0.9922737666413609,
+            "positive_s1_all_gold_kept": 0.9987475673905085
+          },
+          "80": {
+            "retention": 0.9997090344794142,
+            "mean_kept_candidates": 80.0,
+            "oracle_macro_f05": 0.9922887950472984,
+            "positive_s1_all_gold_kept": 0.9989595175244225
+          },
+          "100": {
+            "retention": 0.9998383524885635,
+            "mean_kept_candidates": 100.0,
+            "oracle_macro_f05": 0.9923523212449521,
+            "positive_s1_all_gold_kept": 0.9994219541802347
+          },
+          "120": {
+            "retention": 0.9998976232427569,
+            "mean_kept_candidates": 120.0,
+            "oracle_macro_f05": 0.9923665708990413,
+            "positive_s1_all_gold_kept": 0.9996339043141487
+          },
+          "150": {
+            "retention": 0.9999568939969502,
+            "mean_kept_candidates": 150.0,
+            "oracle_macro_f05": 0.9923784423364992,
+            "positive_s1_all_gold_kept": 0.9998458544480626
+          },
+          "200": {
+            "retention": 0.9999892234992376,
+            "mean_kept_candidates": 200.0,
+            "oracle_macro_f05": 0.9923841158296727,
+            "positive_s1_all_gold_kept": 0.9999614636120157
+          }
+        }
+      },
+      "India": {
+        "s1": 22009,
+        "curve": {
+          "10": {
+            "retention": 0.9839894905373784,
+            "mean_kept_candidates": 10.0,
+            "oracle_macro_f05": 0.9814613861141844,
+            "positive_s1_all_gold_kept": 0.9493074259330512
+          },
+          "20": {
+            "retention": 0.9950189526116289,
+            "mean_kept_candidates": 20.0,
+            "oracle_macro_f05": 0.984843891988938,
+            "positive_s1_all_gold_kept": 0.9837918430165449
+          },
+          "30": {
+            "retention": 0.9977147392476429,
+            "mean_kept_candidates": 30.0,
+            "oracle_macro_f05": 0.9855760142596854,
+            "positive_s1_all_gold_kept": 0.9924490188534052
+          },
+          "40": {
+            "retention": 0.9985768436033226,
+            "mean_kept_candidates": 40.0,
+            "oracle_macro_f05": 0.9857816539154695,
+            "positive_s1_all_gold_kept": 0.9952866487110427
+          },
+          "50": {
+            "retention": 0.9990694746637109,
+            "mean_kept_candidates": 50.0,
+            "oracle_macro_f05": 0.9859842786694143,
+            "positive_s1_all_gold_kept": 0.9968737976144671
+          },
+          "60": {
+            "retention": 0.999315790193905,
+            "mean_kept_candidates": 60.0,
+            "oracle_macro_f05": 0.9860575626861985,
+            "positive_s1_all_gold_kept": 0.9977395151981532
+          },
+          "70": {
+            "retention": 0.9995621057240992,
+            "mean_kept_candidates": 70.0,
+            "oracle_macro_f05": 0.9861144661478878,
+            "positive_s1_all_gold_kept": 0.9984609465178915
+          },
+          "80": {
+            "retention": 0.9996305267047088,
+            "mean_kept_candidates": 80.0,
+            "oracle_macro_f05": 0.9861381307093552,
+            "positive_s1_all_gold_kept": 0.9987014236244709
+          },
+          "100": {
+            "retention": 0.9998221054504153,
+            "mean_kept_candidates": 100.0,
+            "oracle_macro_f05": 0.9862231906804735,
+            "positive_s1_all_gold_kept": 0.9993747595228935
+          },
+          "120": {
+            "retention": 0.9998768422349029,
+            "mean_kept_candidates": 120.0,
+            "oracle_macro_f05": 0.9862366745159166,
+            "positive_s1_all_gold_kept": 0.9995671412081569
+          },
+          "150": {
+            "retention": 0.9999589474116343,
+            "mean_kept_candidates": 150.0,
+            "oracle_macro_f05": 0.9862566369092262,
+            "positive_s1_all_gold_kept": 0.9998557137360523
+          },
+          "200": {
+            "retention": 1.0,
+            "mean_kept_candidates": 200.0,
+            "oracle_macro_f05": 0.9862640639408251,
+            "positive_s1_all_gold_kept": 1.0
+          }
+        },
+        "oracle_macro_f05_no_filter": 0.9862640639408251
+      },
+      "US": {
+        "s1": 32991,
+        "curve": {
+          "10": {
+            "retention": 0.9881612627986348,
+            "mean_kept_candidates": 10.0,
+            "oracle_macro_f05": 0.993298743014623,
+            "positive_s1_all_gold_kept": 0.9606197961873534
+          },
+          "20": {
+            "retention": 0.997218074516496,
+            "mean_kept_candidates": 20.0,
+            "oracle_macro_f05": 0.9956666646815967,
+            "positive_s1_all_gold_kept": 0.9904523097695053
+          },
+          "30": {
+            "retention": 0.9987379124004551,
+            "mean_kept_candidates": 30.0,
+            "oracle_macro_f05": 0.99607823767136,
+            "positive_s1_all_gold_kept": 0.9956922879094737
+          },
+          "40": {
+            "retention": 0.9992356370875995,
+            "mean_kept_candidates": 40.0,
+            "oracle_macro_f05": 0.9962251039769725,
+            "positive_s1_all_gold_kept": 0.9973639373774391
+          },
+          "50": {
+            "retention": 0.9994311717861206,
+            "mean_kept_candidates": 50.0,
+            "oracle_macro_f05": 0.9963053345236391,
+            "positive_s1_all_gold_kept": 0.9979747323753496
+          },
+          "60": {
+            "retention": 0.999600042662116,
+            "mean_kept_candidates": 60.0,
+            "oracle_macro_f05": 0.996352543217744,
+            "positive_s1_all_gold_kept": 0.99858552737326
+          },
+          "70": {
+            "retention": 0.9997066979522184,
+            "mean_kept_candidates": 70.0,
+            "oracle_macro_f05": 0.9963827674161432,
+            "positive_s1_all_gold_kept": 0.998939145529945
+          },
+          "80": {
+            "retention": 0.9997600255972696,
+            "mean_kept_candidates": 80.0,
+            "oracle_macro_f05": 0.9963920344584646,
+            "positive_s1_all_gold_kept": 0.9991320281608641
+          },
+          "100": {
+            "retention": 0.9998489050056882,
+            "mean_kept_candidates": 100.0,
+            "oracle_macro_f05": 0.996441195016393,
+            "positive_s1_all_gold_kept": 0.9994534992123959
+          },
+          "120": {
+            "retention": 0.9999111205915814,
+            "mean_kept_candidates": 120.0,
+            "oracle_macro_f05": 0.9964559555644408,
+            "positive_s1_all_gold_kept": 0.9996785289484682
+          },
+          "150": {
+            "retention": 0.9999555602957907,
+            "mean_kept_candidates": 150.0,
+            "oracle_macro_f05": 0.9964624293526203,
+            "positive_s1_all_gold_kept": 0.9998392644742341
+          },
+          "200": {
+            "retention": 0.9999822241183163,
+            "mean_kept_candidates": 200.0,
+            "oracle_macro_f05": 0.9964669330228964,
+            "positive_s1_all_gold_kept": 0.9999357057896936
+          }
+        },
+        "oracle_macro_f05_no_filter": 0.9964702708740564
+      }
+    },
+    "holdout": {
+      "all": {
+        "s1": 55467,
+        "retrieved_gold": 187514,
+        "mean_candidates": 545.7773450880704,
+        "oracle_macro_f05_no_filter": 0.9922947195516538,
+        "curve": {
+          "10": {
+            "retention": 0.9869663065157801,
+            "mean_kept_candidates": 10.0,
+            "oracle_macro_f05": 0.9886900235632169,
+            "positive_s1_all_gold_kept": 0.9581422894696623
+          },
+          "20": {
+            "retention": 0.9965602568341564,
+            "mean_kept_candidates": 20.0,
+            "oracle_macro_f05": 0.9912725315355511,
+            "positive_s1_all_gold_kept": 0.9886519944979367
+          },
+          "30": {
+            "retention": 0.9984267841334513,
+            "mean_kept_candidates": 30.0,
+            "oracle_macro_f05": 0.9918723115437362,
+            "positive_s1_all_gold_kept": 0.9946889805899435
+          },
+          "40": {
+            "retention": 0.9991093998314793,
+            "mean_kept_candidates": 40.0,
+            "oracle_macro_f05": 0.9920507086510234,
+            "positive_s1_all_gold_kept": 0.9969815069539967
+          },
+          "50": {
+            "retention": 0.9993707136533806,
+            "mean_kept_candidates": 50.0,
+            "oracle_macro_f05": 0.9921168390736644,
+            "positive_s1_all_gold_kept": 0.9978412043405166
+          },
+          "60": {
+            "retention": 0.9995733651887325,
+            "mean_kept_candidates": 60.0,
+            "oracle_macro_f05": 0.992169600878497,
+            "positive_s1_all_gold_kept": 0.9985098578633654
+          },
+          "70": {
+            "retention": 0.9996693580212678,
+            "mean_kept_candidates": 70.0,
+            "oracle_macro_f05": 0.9921995099179479,
+            "positive_s1_all_gold_kept": 0.9988537368179734
+          },
+          "80": {
+            "retention": 0.9997333532429579,
+            "mean_kept_candidates": 80.0,
+            "oracle_macro_f05": 0.9922170353707083,
+            "positive_s1_all_gold_kept": 0.9990638850680116
+          },
+          "100": {
+            "retention": 0.9998453448809156,
+            "mean_kept_candidates": 100.0,
+            "oracle_macro_f05": 0.9922586728713667,
+            "positive_s1_all_gold_kept": 0.999465077181721
+          },
+          "120": {
+            "retention": 0.9998933412971831,
+            "mean_kept_candidates": 120.0,
+            "oracle_macro_f05": 0.9922691616036868,
+            "positive_s1_all_gold_kept": 0.9996179122726578
+          },
+          "150": {
+            "retention": 0.9999413377134507,
+            "mean_kept_candidates": 150.0,
+            "oracle_macro_f05": 0.992282652263643,
+            "positive_s1_all_gold_kept": 0.9997898517499618
+          },
+          "200": {
+            "retention": 0.9999786682594366,
+            "mean_kept_candidates": 200.0,
+            "oracle_macro_f05": 0.9922911795924689,
+            "positive_s1_all_gold_kept": 0.9999235824545316
+          }
+        }
+      },
+      "India": {
+        "s1": 22290,
+        "curve": {
+          "10": {
+            "retention": 0.9835062660018865,
+            "mean_kept_candidates": 10.0,
+            "oracle_macro_f05": 0.9811596107996909,
+            "positive_s1_all_gold_kept": 0.9484305997435776
+          },
+          "20": {
+            "retention": 0.9951893275838836,
+            "mean_kept_candidates": 20.0,
+            "oracle_macro_f05": 0.9843662259834328,
+            "positive_s1_all_gold_kept": 0.9844721971603589
+          },
+          "30": {
+            "retention": 0.9978170057943674,
+            "mean_kept_candidates": 30.0,
+            "oracle_macro_f05": 0.9852344078499711,
+            "positive_s1_all_gold_kept": 0.9927346977539294
+          },
+          "40": {
+            "retention": 0.9987737501684409,
+            "mean_kept_candidates": 40.0,
+            "oracle_macro_f05": 0.9854776463557372,
+            "positive_s1_all_gold_kept": 0.9959637209744052
+          },
+          "50": {
+            "retention": 0.9991645330817949,
+            "mean_kept_candidates": 50.0,
+            "oracle_macro_f05": 0.9855921931969753,
+            "positive_s1_all_gold_kept": 0.997150861864286
+          },
+          "60": {
+            "retention": 0.9994475138121547,
+            "mean_kept_candidates": 60.0,
+            "oracle_macro_f05": 0.9856741634803637,
+            "positive_s1_all_gold_kept": 0.9980530889405955
+          },
+          "70": {
+            "retention": 0.9995822665408974,
+            "mean_kept_candidates": 70.0,
+            "oracle_macro_f05": 0.985722428113409,
+            "positive_s1_all_gold_kept": 0.9985279452965478
+          },
+          "80": {
+            "retention": 0.9996631181781431,
+            "mean_kept_candidates": 80.0,
+            "oracle_macro_f05": 0.9857384503985508,
+            "positive_s1_all_gold_kept": 0.9988128591101192
+          },
+          "100": {
+            "retention": 0.9998113461797601,
+            "mean_kept_candidates": 100.0,
+            "oracle_macro_f05": 0.9858216301418923,
+            "positive_s1_all_gold_kept": 0.9993352011016667
+          },
+          "120": {
+            "retention": 0.9998787225441316,
+            "mean_kept_candidates": 120.0,
+            "oracle_macro_f05": 0.9858374494262768,
+            "positive_s1_all_gold_kept": 0.9995726292796429
+          },
+          "150": {
+            "retention": 0.9999326236356286,
+            "mean_kept_candidates": 150.0,
+            "oracle_macro_f05": 0.9858523876309861,
+            "positive_s1_all_gold_kept": 0.9997625718220239
+          },
+          "200": {
+            "retention": 0.9999730494542515,
+            "mean_kept_candidates": 200.0,
+            "oracle_macro_f05": 0.9858648051148033,
+            "positive_s1_all_gold_kept": 0.9999050287288095
+          }
+        },
+        "oracle_macro_f05_no_filter": 0.9858706090909978
+      },
+      "US": {
+        "s1": 33177,
+        "curve": {
+          "10": {
+            "retention": 0.9892325072371673,
+            "mean_kept_candidates": 10.0,
+            "oracle_macro_f05": 0.9937493387664901,
+            "positive_s1_all_gold_kept": 0.9646795588940387
+          },
+          "20": {
+            "retention": 0.9974581656428723,
+            "mean_kept_candidates": 20.0,
+            "oracle_macro_f05": 0.9959125396965275,
+            "positive_s1_all_gold_kept": 0.9914655585743967
+          },
+          "30": {
+            "retention": 0.9988261667725764,
+            "mean_kept_candidates": 30.0,
+            "oracle_macro_f05": 0.9963319936528486,
+            "positive_s1_all_gold_kept": 0.9960044749880135
+          },
+          "40": {
+            "retention": 0.9993292381557579,
+            "mean_kept_candidates": 40.0,
+            "oracle_macro_f05": 0.9964668270029519,
+            "positive_s1_all_gold_kept": 0.9976666133929999
+          },
+          "50": {
+            "retention": 0.9995057544305584,
+            "mean_kept_candidates": 50.0,
+            "oracle_macro_f05": 0.9965004288072569,
+            "positive_s1_all_gold_kept": 0.9983058973949177
+          },
+          "60": {
+            "retention": 0.999655793264139,
+            "mean_kept_candidates": 60.0,
+            "oracle_macro_f05": 0.9965335668671155,
+            "positive_s1_all_gold_kept": 0.998817324596452
+          },
+          "70": {
+            "retention": 0.9997263997740592,
+            "mean_kept_candidates": 70.0,
+            "oracle_macro_f05": 0.9965511436830011,
+            "positive_s1_all_gold_kept": 0.9990730381972192
+          },
+          "80": {
+            "retention": 0.9997793546564994,
+            "mean_kept_candidates": 80.0,
+            "oracle_macro_f05": 0.9965696790404008,
+            "positive_s1_all_gold_kept": 0.9992328591976986
+          },
+          "100": {
+            "retention": 0.9998676127938996,
+            "mean_kept_candidates": 100.0,
+            "oracle_macro_f05": 0.9965834063445557,
+            "positive_s1_all_gold_kept": 0.9995525011986575
+          },
+          "120": {
+            "retention": 0.9999029160488597,
+            "mean_kept_candidates": 120.0,
+            "oracle_macro_f05": 0.9965903137402413,
+            "positive_s1_all_gold_kept": 0.9996483937989452
+          },
+          "150": {
+            "retention": 0.9999470451175598,
+            "mean_kept_candidates": 150.0,
+            "oracle_macro_f05": 0.996602831865835,
+            "positive_s1_all_gold_kept": 0.9998082147994246
+          },
+          "200": {
+            "retention": 0.99998234837252,
+            "mean_kept_candidates": 200.0,
+            "oracle_macro_f05": 0.9966087455902132,
+            "positive_s1_all_gold_kept": 0.9999360715998082
+          }
+        },
+        "oracle_macro_f05_no_filter": 0.9966107644673492
+      }
+    }
+  },
+  "transfer_us_to_india_validation": {
+    "10": {
+      "retention": 0.9552389944852689,
+      "mean_kept_candidates": 10.0,
+      "oracle_macro_f05": 0.9719470662784626,
+      "positive_s1_all_gold_kept": 0.8728357060407849
+    },
+    "20": {
+      "retention": 0.9811021251556578,
+      "mean_kept_candidates": 20.0,
+      "oracle_macro_f05": 0.9800658197717617,
+      "positive_s1_all_gold_kept": 0.9442574066948827
+    },
+    "30": {
+      "retention": 0.988231591335167,
+      "mean_kept_candidates": 30.0,
+      "oracle_macro_f05": 0.9823328648514218,
+      "positive_s1_all_gold_kept": 0.9650827241246633
+    },
+    "40": {
+      "retention": 0.9915979035811541,
+      "mean_kept_candidates": 40.0,
+      "oracle_macro_f05": 0.9834781267508734,
+      "positive_s1_all_gold_kept": 0.9748941900731051
+    },
+    "50": {
+      "retention": 0.9938557959412674,
+      "mean_kept_candidates": 50.0,
+      "oracle_macro_f05": 0.9841856870207186,
+      "positive_s1_all_gold_kept": 0.981483262793382
+    },
+    "60": {
+      "retention": 0.9950326368077508,
+      "mean_kept_candidates": 60.0,
+      "oracle_macro_f05": 0.9845046033495205,
+      "positive_s1_all_gold_kept": 0.9849461331281262
+    },
+    "70": {
+      "retention": 0.9958673727711865,
+      "mean_kept_candidates": 70.0,
+      "oracle_macro_f05": 0.9847570614960043,
+      "positive_s1_all_gold_kept": 0.9873989996152366
+    },
+    "80": {
+      "retention": 0.9965515825772815,
+      "mean_kept_candidates": 80.0,
+      "oracle_macro_f05": 0.9850737218443808,
+      "positive_s1_all_gold_kept": 0.9893709118891881
+    },
+    "100": {
+      "retention": 0.9976189498747896,
+      "mean_kept_candidates": 100.0,
+      "oracle_macro_f05": 0.9854000056549136,
+      "positive_s1_all_gold_kept": 0.9925933051173528
+    },
+    "120": {
+      "retention": 0.9983578964653721,
+      "mean_kept_candidates": 120.0,
+      "oracle_macro_f05": 0.9856794898048272,
+      "positive_s1_all_gold_kept": 0.9949499807618315
+    },
+    "150": {
+      "retention": 0.9990831588598328,
+      "mean_kept_candidates": 150.0,
+      "oracle_macro_f05": 0.985871715719013,
+      "positive_s1_all_gold_kept": 0.9970661792997306
+    },
+    "200": {
+      "retention": 0.9996168425085868,
+      "mean_kept_candidates": 200.0,
+      "oracle_macro_f05": 0.9861057532673309,
+      "positive_s1_all_gold_kept": 0.9987495190457868
+    }
+  },
+  "filter_training": {
+    "fold0": {
+      "rows": 9572294,
+      "positives": 745654,
+      "best_iteration": 300,
+      "seconds": 663.3888779169997,
+      "best_valid_logloss": 0.018537880498122536,
+      "gain_top": {
+        "digits_jaccard": 7306318.268528938,
+        "rank_address_char": 3118295.7545843124,
+        "rrf_score": 602043.5655789375,
+        "name_idf_frac": 525063.1256353855,
+        "addr_idf_frac": 418399.5865507126,
+        "addr_len_ratio": 383697.6358745098,
+        "digits_tgt_n": 311713.1529457569,
+        "house_match": 244468.35212993622,
+        "score_name_word": 194332.5493285656,
+        "name_overlap_frac": 191899.6997346878,
+        "name_len_ratio": 157917.23564434052,
+        "digits_all_s1_in_tgt": 128892.00021123886,
+        "rrf_rank": 127101.61248540878,
+        "score_address_char": 108546.87042474747,
+        "score_name_char": 71358.58039140701
+      }
+    },
+    "fold1": {
+      "rows": 9572902,
+      "positives": 746222,
+      "best_iteration": 300,
+      "seconds": 667.8430009179997,
+      "best_valid_logloss": 0.018578212478490282,
+      "gain_top": {
+        "digits_jaccard": 7283049.870150566,
+        "rank_address_char": 3135975.92065382,
+        "rrf_score": 610179.5307745934,
+        "name_idf_frac": 538952.6907529831,
+        "addr_idf_frac": 420209.75568056107,
+        "addr_len_ratio": 396686.630661726,
+        "digits_tgt_n": 307191.969445467,
+        "house_match": 226934.60535144806,
+        "score_name_word": 199262.50737547874,
+        "name_overlap_frac": 184789.29859924316,
+        "name_len_ratio": 142547.84374666214,
+        "digits_all_s1_in_tgt": 138984.15428876877,
+        "rrf_rank": 128696.70588898659,
+        "score_address_char": 118960.42501020432,
+        "rrf_rank_frac": 57130.50039315224
+      }
+    },
+    "fold2": {
+      "rows": 9573892,
+      "positives": 747212,
+      "best_iteration": 300,
+      "seconds": 674.5533453490002,
+      "best_valid_logloss": 0.018412371888296267,
+      "gain_top": {
+        "digits_jaccard": 7303114.919432402,
+        "rank_address_char": 3131525.3335888386,
+        "rrf_score": 622564.1537871361,
+        "name_idf_frac": 539659.2664737701,
+        "addr_idf_frac": 421448.36151218414,
+        "addr_len_ratio": 385000.50729084015,
+        "digits_tgt_n": 302748.4610071182,
+        "house_match": 230240.69229888916,
+        "score_name_word": 200540.42416334152,
+        "name_overlap_frac": 188230.0772383213,
+        "name_len_ratio": 149740.9770488739,
+        "digits_all_s1_in_tgt": 141301.3973851204,
+        "rrf_rank": 131654.0829129219,
+        "score_address_char": 117390.10373234749,
+        "score_name_char": 59843.15356206894
+      }
+    },
+    "final": {
+      "rows": 14359544,
+      "positives": 1119544,
+      "best_iteration": 300,
+      "seconds": 977.9687154860003,
+      "best_valid_logloss": 0.018387113851817894,
+      "gain_top": {
+        "digits_jaccard": 10886172.441653728,
+        "rank_address_char": 4698934.428289413,
+        "rrf_score": 902932.1092171669,
+        "name_idf_frac": 792371.1802067757,
+        "addr_idf_frac": 623758.7725262642,
+        "addr_len_ratio": 587462.2685990334,
+        "digits_tgt_n": 469509.0512113571,
+        "house_match": 334825.52167224884,
+        "score_name_word": 295767.1955795288,
+        "name_overlap_frac": 273532.1613073349,
+        "digits_all_s1_in_tgt": 238841.7687959671,
+        "name_len_ratio": 228880.43656921387,
+        "rrf_rank": 191217.7526922226,
+        "score_address_char": 191209.75447320938,
+        "rrf_rank_frac": 101810.62856864929
+      }
+    },
+    "transfer": {
+      "rows": 8619433,
+      "positives": 678913,
+      "best_iteration": 249,
+      "seconds": 505.8736688939998,
+      "best_valid_logloss": 0.026303935199066986,
+      "gain_top": {
+        "house_match": 4906383.952689648,
+        "rank_address_char": 3165571.997522354,
+        "digits_jaccard": 2139935.1204299927,
+        "name_overlap_frac": 412896.6643753052,
+        "name_idf_frac": 377852.84109830856,
+        "addr_len_ratio": 314697.63457632065,
+        "digits_tgt_n": 240583.08558440208,
+        "rrf_score": 240102.29300570488,
+        "name_len_ratio": 228219.42694592476,
+        "addr_idf_frac": 193309.94048786163,
+        "score_address_char": 120298.81099438667,
+        "rrf_rank": 117777.96171164513,
+        "score_name_word": 99319.41595816612,
+        "digits_all_s1_in_tgt": 96242.15467453003,
+        "score_name_char": 83608.05444931984
+      }
+    }
+  },
+  "analysis": {
+    "ownership_validation_holdout": {
+      "all": {
+        "positive": 373103,
+        "neg_unowned": 12577132,
+        "neg_owned_by_other_s1": 47304719,
+        "share_of_negatives_owned_by_other_s1": 0.7899675479303404,
+        "positive_rate": 0.006192071775542306
+      },
+      "same_address": {
+        "positive": 138451,
+        "neg_unowned": 6626,
+        "neg_owned_by_other_s1": 40643,
+        "share_of_negatives_owned_by_other_s1": 0.859823563011699,
+        "positive_rate": 0.7454824466939479
+      },
+      "strong_name": {
+        "positive": 215784,
+        "neg_unowned": 1001832,
+        "neg_owned_by_other_s1": 2737066,
+        "share_of_negatives_owned_by_other_s1": 0.7320515296218297,
+        "positive_rate": 0.0545641849332007
+      },
+      "same_address_strong_name": {
+        "positive": 78465,
+        "neg_unowned": 1104,
+        "neg_owned_by_other_s1": 3,
+        "share_of_negatives_owned_by_other_s1": 0.0027100271002710027,
+        "positive_rate": 0.9860880711808174
+      },
+      "same_address_weak_name": {
+        "positive": 23790,
+        "neg_unowned": 3883,
+        "neg_owned_by_other_s1": 39448,
+        "share_of_negatives_owned_by_other_s1": 0.9103874824028986,
+        "positive_rate": 0.3544345286869981
+      },
+      "filter_top10": {
+        "positive": 368157,
+        "neg_unowned": 157270,
+        "neg_owned_by_other_s1": 579243,
+        "share_of_negatives_owned_by_other_s1": 0.7864667697650958,
+        "positive_rate": 0.33327328523450445
+      }
+    },
+    "gold_patterns_validation_holdout": {
+      "digits_equal": {
+        "count": 228910,
+        "share": 0.613530312004996
+      },
+      "digits_other_mismatch": {
+        "count": 75860,
+        "share": 0.2033218709042811
+      },
+      "digits_target_subset": {
+        "count": 26420,
+        "share": 0.07081154533734653
+      },
+      "digits_one_edit_typo": {
+        "count": 18395,
+        "share": 0.049302739458004896
+      },
+      "target_address_empty": {
+        "count": 14835,
+        "share": 0.03976113834517546
+      },
+      "digits_equal_after_leading_zero_strip": {
+        "count": 12390,
+        "share": 0.03320798814268446
+      }
+    },
+    "gold_pairs": 373103,
+    "gold_target_name_script": {
+      "LATIN": 349281,
+      "DEVANAGARI": 13473,
+      "TELUGU": 2011,
+      "KANNADA": 1763,
+      "TAMIL": 1729,
+      "BENGALI": 1576,
+      "GUJARATI": 1540,
+      "MALAYALAM": 1025,
+      "ORIYA": 388,
+      "GURMUKHI": 317
+    },
+    "gold_name_token_set_bins": {
+      ">=90": 271750,
+      "50-89": 66380,
+      "<50": 34973
+    },
+    "address_substitutions_top": [
+      [
+        "street",
+        "st",
+        40653
+      ],
+      [
+        "road",
+        "rd",
+        39743
+      ],
+      [
+        "drive",
+        "dr",
+        38213
+      ],
+      [
+        "avenue",
+        "ave",
+        29470
+      ],
+      [
+        "tx",
+        "texas",
+        25852
+      ],
+      [
+        "maharashtra",
+        "mh",
+        18478
+      ],
+      [
+        "lane",
+        "ln",
+        16135
+      ],
+      [
+        "oh",
+        "ohio",
+        14858
+      ],
+      [
+        "maharashtra",
+        "\u092e\u0939\u093e\u0930\u093e\u0937\u094d\u091f\u094d\u0930",
+        14599
+      ],
+      [
+        "il",
+        "illinois",
+        13269
+      ],
+      [
+        "tn",
+        "tennessee",
+        11154
+      ],
+      [
+        "court",
+        "ct",
+        9531
+      ],
+      [
+        "ma",
+        "massachusetts",
+        9471
+      ],
+      [
+        "in",
+        "indiana",
+        9299
+      ],
+      [
+        "az",
+        "arizona",
+        8719
+      ],
+      [
+        "nc",
+        "carolina",
+        7917
+      ],
+      [
+        "nc",
+        "north",
+        7911
+      ],
+      [
+        "md",
+        "maryland",
+        7278
+      ],
+      [
+        "ny",
+        "york",
+        7220
+      ],
+      [
+        "va",
+        "virginia",
+        7054
+      ],
+      [
+        "ny",
+        "new",
+        7027
+      ],
+      [
+        "wa",
+        "washington",
+        6933
+      ],
+      [
+        "ca",
+        "california",
+        6567
+      ],
+      [
+        "karnataka",
+        "ka",
+        6379
+      ],
+      [
+        "uttar",
+        "up",
+        6197
+      ],
+      [
+        "pradesh",
+        "up",
+        6193
+      ],
+      [
+        "al",
+        "alabama",
+        6055
+      ],
+      [
+        "ky",
+        "kentucky",
+        5413
+      ],
+      [
+        "gujarat",
+        "gj",
+        5397
+      ],
+      [
+        "mn",
+        "minnesota",
+        5394
+      ],
+      [
+        "karnataka",
+        "\u0c95\u0cb0\u0ccd\u0ca8\u0cbe\u0c9f\u0c95",
+        5390
+      ],
+      [
+        "or",
+        "oregon",
+        5211
+      ],
+      [
+        "ar",
+        "arkansas",
+        4933
+      ],
+      [
+        "circle",
+        "cir",
+        4689
+      ],
+      [
+        "pradesh",
+        "\u092a\u094d\u0930\u0926\u0947\u0936",
+        4669
+      ],
+      [
+        "nadu",
+        "tn",
+        4664
+      ],
+      [
+        "tamil",
+        "tn",
+        4664
+      ],
+      [
+        "bengal",
+        "wb",
+        4571
+      ],
+      [
+        "west",
+        "wb",
+        4520
+      ],
+      [
+        "mo",
+        "missouri",
+        4503
+      ]
+    ],
+    "name_substitutions_top": [
+      [
+        "limited",
+        "ltd",
+        28202
+      ],
+      [
+        "llc",
+        "l",
+        8657
+      ],
+      [
+        "llc",
+        "c",
+        8652
+      ],
+      [
+        "inc",
+        "incorporated",
+        6066
+      ],
+      [
+        "ltd",
+        "limited",
+        4372
+      ],
+      [
+        "limited",
+        "l\u00edmited",
+        3764
+      ],
+      [
+        "private",
+        "pr\u00edvate",
+        3385
+      ],
+      [
+        "inc",
+        "\u00ednc",
+        3219
+      ],
+      [
+        "private",
+        "center",
+        3188
+      ],
+      [
+        "private",
+        "services",
+        2190
+      ],
+      [
+        "llp",
+        "l",
+        1906
+      ],
+      [
+        "llp",
+        "p",
+        1906
+      ],
+      [
+        "c",
+        "llc",
+        1857
+      ],
+      [
+        "l",
+        "llc",
+        1334
+      ],
+      [
+        "limited",
+        "smt",
+        1206
+      ],
+      [
+        "limited",
+        "shri",
+        1198
+      ],
+      [
+        "corp",
+        "corporation",
+        1195
+      ],
+      [
+        "limited",
+        "sri",
+        1151
+      ],
+      [
+        "limited",
+        "dr",
+        1150
+      ],
+      [
+        "limited",
+        "mr",
+        1142
+      ],
+      [
+        "private",
+        "service",
+        1108
+      ],
+      [
+        "private",
+        "partners",
+        876
+      ],
+      [
+        "corporation",
+        "corp",
+        797
+      ],
+      [
+        "co",
+        "company",
+        748
+      ],
+      [
+        "company",
+        "co",
+        746
+      ]
+    ],
+    "dropped_gold_examples_rank_ge_60": [
+      {
+        "rank": 72,
+        "s1_name": "orthopedic diamond care associates inc",
+        "s1_address": "843 massachusetts avenue arlington ma",
+        "cand_name": "orthopedicdiamondcare com",
+        "cand_address": "1041 massachusetts avenue arlington ma",
+        "digits_overlap": 0.0,
+        "name_idf_frac": 0.0,
+        "addr_idf_frac": 1.0
+      },
+      {
+        "rank": 78,
+        "s1_name": "ellison massage",
+        "s1_address": "unit a110 az 10750 mcdowell road avondale",
+        "cand_name": "emassage com www emassagec com",
+        "cand_address": "mcdowell rd avondale goodyear az",
+        "digits_overlap": 0.0,
+        "name_idf_frac": 0.0,
+        "addr_idf_frac": 0.5318109393119812
+      },
+      {
+        "rank": 77,
+        "s1_name": "whirlwind vidyalaya associates",
+        "s1_address": "no 28 32 14th cross street new colony tambaram kanchipuram tamil nadu",
+        "cand_name": "shri whir1wind vidyalaya associates llp",
+        "cand_address": "",
+        "digits_overlap": 0.0,
+        "name_idf_frac": 0.47476938366889954,
+        "addr_idf_frac": 0.0
+      },
+      {
+        "rank": 62,
+        "s1_name": "aditanth match llp",
+        "s1_address": "house no 105 grd floor village tatesar delhi north west delhi delhi",
+        "cand_name": "adltanth match",
+        "cand_address": "hn 7 314 house no 105 delhi",
+        "digits_overlap": 1.0,
+        "name_idf_frac": 0.41924652457237244,
+        "addr_idf_frac": 0.22872598469257355
+      },
+      {
+        "rank": 89,
+        "s1_name": "digital india creative private limited",
+        "s1_address": "ground floor ab 270 salt lake city kolkata sakltlake north 24 parganas west bengal",
+        "cand_name": "sri indiacreativecom",
+        "cand_address": "ground floor sakltlake saltlake west bengal",
+        "digits_overlap": 0.0,
+        "name_idf_frac": 0.0,
+        "addr_idf_frac": 0.33152011036872864
+      },
+      {
+        "rank": 78,
+        "s1_name": "tri state cafe inc",
+        "s1_address": "1005 15th street burlington ks",
+        "cand_name": "deltacira",
+        "cand_address": "fifteenth street burlington ks",
+        "digits_overlap": 0.0,
+        "name_idf_frac": 0.0,
+        "addr_idf_frac": 0.6914561986923218
+      },
+      {
+        "rank": 125,
+        "s1_name": "shyam international ltd",
+        "s1_address": "unit no 1110 c wing one bkc plot no 66 bandra kurla complex bandr a east mumbai mumbai city maharashtra",
+        "cand_name": "shyam international limited",
+        "cand_address": "undt no 1108 mumbai mumbai city mh",
+        "digits_overlap": 0.0,
+        "name_idf_frac": 0.8019251823425293,
+        "addr_idf_frac": 0.037819623947143555
+      },
+      {
+        "rank": 107,
+        "s1_name": "leix l l c",
+        "s1_address": "114 hemenway street unit 4 boston ma",
+        "cand_name": "l\u00e9ix",
+        "cand_address": "11 hemenway st po box 5101 boston massachusetts",
+        "digits_overlap": 0.0,
+        "name_idf_frac": 0.0,
+        "addr_idf_frac": 0.5874360203742981
+      },
+      {
+        "rank": 105,
+        "s1_name": "ahmedabad services private limited",
+        "s1_address": "block no a s f 1 to 7 2nd floor pushpdeep arcade nr bapunagar city gold ahmedabad gujarat",
+        "cand_name": "ahmedabad services private limited id 64207",
+        "cand_address": "358 bock no a ahmedabad \u0a97\u0ac1\u0a9c\u0ab0\u0abe\u0aa4",
+        "digits_overlap": 0.0,
+        "name_idf_frac": 1.0,
+        "addr_idf_frac": 0.041268669068813324
+      },
+      {
+        "rank": 111,
+        "s1_name": "smith drury and dodd llc",
+        "s1_address": "1035 15th avenue hickory nc",
+        "cand_name": "5mith dr\u00fary and",
+        "cand_address": "2035 15th ave pmb 9897 hickory dp north carolina",
+        "digits_overlap": 1.0,
+        "name_idf_frac": 0.12439235299825668,
+        "addr_idf_frac": 0.636604368686676
+      },
+      {
+        "rank": 110,
+        "s1_name": "historical initiative",
+        "s1_address": "222 bridgewater circle suisun city ca",
+        "cand_name": "hinitiative com",
+        "cand_address": "suisuncity 61 bridgewater cir california",
+        "digits_overlap": 0.0,
+        "name_idf_frac": 0.0,
+        "addr_idf_frac": 0.26716598868370056
+      },
+      {
+        "rank": 142,
+        "s1_name": "reckon trading pvt ltd",
+        "s1_address": "kolkata diamond arcade building west bengal room no 502 5th floor 68 jessore road near shyam nagar high school kolkata howrah",
+        "cand_name": "reck0n trading pvt",
+        "cand_address": "",
+        "digits_overlap": 0.0,
+        "name_idf_frac": 0.38561657071113586,
+        "addr_idf_frac": 0.0
+      },
+      {
+        "rank": 183,
+        "s1_name": "mangal technologies pvt ltd",
+        "s1_address": "haryana gurgaon minarch tower plot no 4 2f sector 44 gurugram sector 45",
+        "cand_name": "mangaltechnologies com",
+        "cand_address": "935 3 minarch tower null sector 45 gurgaon hr",
+        "digits_overlap": 1.0,
+        "name_idf_frac": 0.0,
+        "addr_idf_frac": 0.49577680230140686
+      },
+      {
+        "rank": 84,
+        "s1_name": "fifine brown armada care",
+        "s1_address": "533 indiana street albuquerque nm",
+        "cand_name": "fifine 8rown",
+        "cand_address": "",
+        "digits_overlap": 0.0,
+        "name_idf_frac": 0.35710036754608154,
+        "addr_idf_frac": 0.0
+      },
+      {
+        "rank": 100,
+        "s1_name": "vanteon hall",
+        "s1_address": "434 limestone road ridgefield ct",
+        "cand_name": "vante0n h\u00e1ll",
+        "cand_address": "43 limestone road lakes east ct",
+        "digits_overlap": 0.0,
+        "name_idf_frac": 0.0,
+        "addr_idf_frac": 0.6523089408874512
+      },
+      {
+        "rank": 97,
+        "s1_name": "luxury india chemicals private limited",
+        "s1_address": "no 113 above icici bank 3rd floor kathriguppe main road bsk 3rd stage bangalore karnataka",
+        "cand_name": "luxury india private limited services",
+        "cand_address": "bengaluru bangalore g 151 ka",
+        "digits_overlap": 0.0,
+        "name_idf_frac": 0.7154236435890198,
+        "addr_idf_frac": 0.0
+      },
+      {
+        "rank": 96,
+        "s1_name": "bangalore south dairy llp",
+        "s1_address": "9 2nd cross csi compound behind csi compound park bangalore south bangalore karnataka",
+        "cand_name": "bangalore south enterprises",
+        "cand_address": "",
+        "digits_overlap": 0.0,
+        "name_idf_frac": 0.47866445779800415,
+        "addr_idf_frac": 0.0
+      },
+      {
+        "rank": 67,
+        "s1_name": "skybridge college corporation",
+        "s1_address": "flat 301 veeravihar apartments plot 32 kamalapuri colony phase 3 srinagar col hyderabad telangana",
+        "cand_name": "m s skybridge co1lege",
+        "cand_address": "",
+        "digits_overlap": 0.0,
+        "name_idf_frac": 0.5022732019424438,
+        "addr_idf_frac": 0.0
+      },
+      {
+        "rank": 96,
+        "s1_name": "supreme hawk",
+        "s1_address": "501 broadway street san marcos tx",
+        "cand_name": "sh",
+        "cand_address": "503 broadway street sanm arcos tx",
+        "digits_overlap": 0.0,
+        "name_idf_frac": 0.0,
+        "addr_idf_frac": 0.4852926731109619
+      },
+      {
+        "rank": 99,
+        "s1_name": "dream trading private limited",
+        "s1_address": "aiswarya vettimonkonam thottakkadu p o kallambalam thiruvananthapuram trivandrum kerala",
+        "cand_name": "\u0d21\u0d4d\u0d30\u0d40\u0d02 \u0d1f\u0d4d\u0d30\u0d47\u0d21\u0d3f\u0d02\u0d17\u0d4d \u0d2a\u0d4d\u0d30\u0d48\u0d35\u0d31\u0d4d\u0d31\u0d4d \u0d32\u0d3f\u0d2e\u0d3f\u0d31\u0d4d\u0d31\u0d21\u0d4d",
+        "cand_address": "no a 326 aiswarya trivandrum keralam trivandrum",
+        "digits_overlap": 0.0,
+        "name_idf_frac": 0.0,
+        "addr_idf_frac": 0.2530006468296051
+      },
+      {
+        "rank": 66,
+        "s1_name": "natasha seva samiti",
+        "s1_address": "f 801 maharashtra 1 modi baug cts 2254 to2262 3198 g k road haveli pune",
+        "cand_name": "sevanatashasamiticom",
+        "cand_address": "0856 f 801 pune haveli \u092e\u0939\u093e\u0930\u093e\u0937\u094d\u091f\u094d\u0930",
+        "digits_overlap": 1.0,
+        "name_idf_frac": 0.0,
+        "addr_idf_frac": 0.20142410695552826
+      },
+      {
+        "rank": 97,
+        "s1_name": "natasha seva samiti",
+        "s1_address": "f 801 maharashtra 1 modi baug cts 2254 to2262 3198 g k road haveli pune",
+        "cand_name": "m s evotavoonyx",
+        "cand_address": "block f 328 f 801 haveli pune maharashtra",
+        "digits_overlap": 1.0,
+        "name_idf_frac": 0.0,
+        "addr_idf_frac": 0.27738723158836365
+      },
+      {
+        "rank": 63,
+        "s1_name": "global producer private limited",
+        "s1_address": "1207 343 1207 1 343 1 9th main 7th sector hsr layout bangalore karnataka",
+        "cand_name": "\u0c97\u0ccd\u0cb2\u0ccb\u0cac\u0cb2\u0ccd \u0caa\u0ccd\u0cb0\u0cca\u0ca1\u0ccd\u0caf\u0cc2\u0cb8\u0cb0\u0ccd \u0caa\u0ccd\u0cb0\u0cc8\u0cb5\u0cc7\u0c9f\u0ccd \u0cb2\u0cbf\u0cae\u0cbf\u0c9f\u0cc6\u0ca1\u0ccd",
+        "cand_address": "bangalore 1207 34 1207 1 343 1 karnataka bangalore",
+        "digits_overlap": 3.0,
+        "name_idf_frac": 0.0,
+        "addr_idf_frac": 0.21184900403022766
+      },
+      {
+        "rank": 66,
+        "s1_name": "global infotech private limited",
+        "s1_address": "no 242 243 balaji pride rajiv nagar choodasandra bangalore south bangalore karnataka",
+        "cand_name": "global infotech private",
+        "cand_address": "1 6 bangalore bangalore south ka",
+        "digits_overlap": 0.0,
+        "name_idf_frac": 0.8391493558883667,
+        "addr_idf_frac": 0.16418024897575378
+      },
+      {
+        "rank": 87,
+        "s1_name": "value diagnostic concepts",
+        "s1_address": "seattle 9551 6th avenue wa",
+        "cand_name": "value diagnostic",
+        "cand_address": "955 sixth ave seattlle wa",
+        "digits_overlap": 0.0,
+        "name_idf_frac": 0.6694687008857727,
+        "addr_idf_frac": 0.231979638338089
+      },
+      {
+        "rank": 189,
+        "s1_name": "shah tree pvt ltd",
+        "s1_address": "gali no 9 rajveer colony gharoli extn near mayur vihar phase 3 new delhi 1 10096 b 659 new delhi delhi east delhi",
+        "cand_name": "shahtree com",
+        "cand_address": "east delhi dl new delhi b 659",
+        "digits_overlap": 0.0,
+        "name_idf_frac": 0.0,
+        "addr_idf_frac": 0.0
+      },
+      {
+        "rank": 95,
+        "s1_name": "aishwarya ventures",
+        "s1_address": "plot no 384 phase 9 s a s nagar mohali rupnagar punjab",
+        "cand_name": "haloevofaye",
+        "cand_address": "s a s nagar mohali rupnagar h no 84 pb",
+        "digits_overlap": 0.0,
+        "name_idf_frac": 0.0,
+        "addr_idf_frac": 0.5722640156745911
+      },
+      {
+        "rank": 134,
+        "s1_name": "wells carrasco and nash llc",
+        "s1_address": "5473 moraine court hamilton oh",
+        "cand_name": "wells carrasco and",
+        "cand_address": "5272 meraine ct hammilton ohio",
+        "digits_overlap": 0.0,
+        "name_idf_frac": 0.6439604759216309,
+        "addr_idf_frac": 0.0
+      },
+      {
+        "rank": 87,
+        "s1_name": "twisted nails",
+        "s1_address": "19126 layton avenue scandia mn",
+        "cand_name": "twistednailscom",
+        "cand_address": "9126 layton ave marine on sst croix mn",
+        "digits_overlap": 0.0,
+        "name_idf_frac": 0.0,
+        "addr_idf_frac": 0.4890681505203247
+      },
+      {
+        "rank": 68,
+        "s1_name": "mumbai services pvt ltd",
+        "s1_address": "pl 53 new collector compd gate 7 malwani near heena hotel malad w 58b maharashtra mumbai city mumbai",
+        "cand_name": "mumbai services pvt ltd",
+        "cand_address": "bllck a 980 58b mumbai nerul mh",
+        "digits_overlap": 1.0,
+        "name_idf_frac": 1.0,
+        "addr_idf_frac": 0.0
+      },
+      {
+        "rank": 78,
+        "s1_name": "luxora india feeds private limited",
+        "s1_address": "the spire office no 409 b 150 ft ring road rajkot gujarat",
+        "cand_name": "lifeeds com",
+        "cand_address": "rajkot block d g 74 the spire office no 409 gandhinagar gj",
+        "digits_overlap": 1.0,
+        "name_idf_frac": 0.0,
+        "addr_idf_frac": 0.5877197980880737
+      },
+      {
+        "rank": 131,
+        "s1_name": "kurz cote bagley l l c",
+        "s1_address": "1006 4th street langdon nd",
+        "cand_name": "kurz cote and bagley l l c",
+        "cand_address": "fourth st langdoon north dakota",
+        "digits_overlap": 0.0,
+        "name_idf_frac": 1.0,
+        "addr_idf_frac": 0.0
+      },
+      {
+        "rank": 173,
+        "s1_name": "sai builders pvt ltd",
+        "s1_address": "west bengal 94 vivekanand nagar p o podrah andul road near westbank hospital 3rd floor howrah uluberia i ananta bhavan",
+        "cand_name": "pvt sai builders l\u00edmited",
+        "cand_address": "hn 497 ananta bhavan howrah \u09aa\u09b6\u09cd\u099a\u09bf\u09ae\u09ac\u0999\u09cd\u0997",
+        "digits_overlap": 0.0,
+        "name_idf_frac": 0.8423249125480652,
+        "addr_idf_frac": 0.0
+      },
+      {
+        "rank": 72,
+        "s1_name": "orban biologics",
+        "s1_address": "16220 7th street unit 1371 phoenix az",
+        "cand_name": "orban baoogitcs baoogitcs",
+        "cand_address": "",
+        "digits_overlap": 0.0,
+        "name_idf_frac": 0.5511322617530823,
+        "addr_idf_frac": 0.0
+      },
+      {
+        "rank": 61,
+        "s1_name": "blue bright diagnostics",
+        "s1_address": "702 lons street unit 702 brownfield tx",
+        "cand_name": "bluebright",
+        "cand_address": "02 lons st brwnfield city tx",
+        "digits_overlap": 0.0,
+        "name_idf_frac": 0.0,
+        "addr_idf_frac": 0.48077887296676636
+      },
+      {
+        "rank": 92,
+        "s1_name": "hotel global private limited",
+        "s1_address": "plot no 3 4 5 2nd floor shrithan govardhan giri seri lingampally k v rangareddy telangana",
+        "cand_name": "hotelglobal com",
+        "cand_address": "no 8 3 seri lingampally k v rangareddy \u0c24\u0c46\u0c32\u0c02\u0c17\u0c3e\u0c23",
+        "digits_overlap": 1.0,
+        "name_idf_frac": 0.0,
+        "addr_idf_frac": 0.35638225078582764
+      },
+      {
+        "rank": 63,
+        "s1_name": "jai trading private limited",
+        "s1_address": "maharashtra mumbai agarwal estate mumbai city unit no 4 chimat pada marol andheri east",
+        "cand_name": "\u091c\u092f \u091f\u094d\u0930\u0947\u0921\u093f\u0902\u0917 \u092a\u094d\u0930\u093e\u0907\u0935\u0947\u091f \u0932\u093f\u092e\u093f\u091f\u0947\u0921",
+        "cand_address": "agarwal estate null mumbai mumbai suburban maharashtra",
+        "digits_overlap": 0.0,
+        "name_idf_frac": 0.0,
+        "addr_idf_frac": 0.36107635498046875
+      },
+      {
+        "rank": 89,
+        "s1_name": "tirupati shivam industries",
+        "s1_address": "hotel alishan 2nd mile g t more po sevoke road siliguri darjiling darjeeling west bengal",
+        "cand_name": "\u09a4\u09bf\u09b0\u09c1\u09aa\u09a4\u09bf \u09b6\u09bf\u09ac\u09ae \u0987\u09a8\u09cd\u09a1\u09be\u09b8\u09cd\u099f\u09cd\u09b0\u09bf\u099c",
+        "cand_address": "htoel alishan darjiling darjeeling west bengal",
+        "digits_overlap": 0.0,
+        "name_idf_frac": 0.0,
+        "addr_idf_frac": 0.27862077951431274
+      },
+      {
+        "rank": 89,
+        "s1_name": "gallman safe entergy",
+        "s1_address": "2333 quiemuth street fl 1 olympia wa",
+        "cand_name": "safeentergy com",
+        "cand_address": "333 quiemuth street nisqually tribe wa",
+        "digits_overlap": 0.0,
+        "name_idf_frac": 0.0,
+        "addr_idf_frac": 0.6243579387664795
+      },
+      {
+        "rank": 99,
+        "s1_name": "fa social llc",
+        "s1_address": "392 4th avenue kankakee il",
+        "cand_name": "fa s0cial",
+        "cand_address": "39 fourth avenue kankakee cdp illinois",
+        "digits_overlap": 0.0,
+        "name_idf_frac": 0.4682205617427826,
+        "addr_idf_frac": 0.5670944452285767
+      }
+    ]
+  },
+  "score_stage_seconds": 5221.449570484997,
+  "config_sha256": "038266a9976086341db2a0191e1bd95acde3e1eca29e23a394525e482458c856"
+}

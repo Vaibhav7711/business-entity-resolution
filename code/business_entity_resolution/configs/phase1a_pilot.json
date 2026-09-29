@@ -1,0 +1,19 @@
+{
+  "seed": 20260925,
+  "sample_size": 25000,
+  "validation_fold": 0,
+  "top_k_per_source": 100,
+  "ngram_range": [3, 4],
+  "hash_features": 262144,
+  "max_document_frequency": 0.01,
+  "query_batch_size": 64,
+  "threads": 4,
+  "dependencies": {
+    "sparse-dot-topn": {
+      "version": "1.2.0",
+      "license": "Apache-2.0",
+      "license_verified_before_install": true,
+      "source": "https://pypi.org/project/sparse-dot-topn/"
+    }
+  }
+}

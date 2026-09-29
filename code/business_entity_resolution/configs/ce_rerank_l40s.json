@@ -1,0 +1,26 @@
+{
+  "backbone": "BAAI/bge-reranker-v2-m3",
+  "allowed_licenses": [
+    "mit",
+    "apache-2.0"
+  ],
+  "max_length": 128,
+  "train_s1": 220000,
+  "neg_top": 12,
+  "neg_random": 4,
+  "max_train_pairs": 1600000,
+  "epochs": 1,
+  "lr": 2e-05,
+  "warmup": 0.05,
+  "weight_decay": 0.01,
+  "freeze_word_embeddings": true,
+  "batch_size": 128,
+  "score_batch_size": 1024,
+  "train_minutes": 22,
+  "seed": 20260929,
+  "log_every": 200,
+  "test_budget_minutes": 180,
+  "min_k": 10,
+  "max_k": 40,
+  "purpose": "Round 2 on one L40S (Lightning AI, AWS): BAAI/bge-reranker-v2-m3 (Apache-2.0, XLM-R-large with a trained multilingual cross-encoder head) fine-tuned on ~2M fold-0 pairs, then scoring round 1's top-8 per S1."
+}

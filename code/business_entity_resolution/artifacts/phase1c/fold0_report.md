@@ -1,0 +1,95 @@
+# Phase 1C — full validation-fold blocker evaluation (fold 0, B+C+E)
+
+Status: **complete**. Evaluated 441,467 fold-0 S1 records (18 shards of 25,000) against the complete training S2/S3 corpus, partitioned by dynamic normalized country and target source. No test files were read, no gold links were injected, and target IDs were never deduplicated by text.
+
+Phase 2 gate: **PASS**.
+
+| Gate check | Result |
+|---|---|
+| link_recall_within_0.5pp | pass |
+| positive_every_match_within_1pp | pass |
+| p95_candidates_at_most_800 | pass |
+| no_slice_drop_over_2pp | pass |
+| pilot_reproduced_exact_or_within_platform_tolerance | pass |
+
+## Candidate quality
+
+| Metric | Full fold | Pilot (25k) |
+|---|---:|---:|
+| Evaluated S1 | 441,467 | 25,000 |
+| Positive S1 / singletons | 416,805 / 24,662 | 23,600 / 1,400 |
+| True links | 1,526,031 | 86,372 |
+| Retrieved true links | 1,492,647 | 84,465 |
+| Link recall | 97.812% | 97.792% |
+| Positive S1 with every match | 93.564% | 93.50% |
+| All S1 every match (singletons count as satisfied) | 93.924% | — |
+| Zero-candidate rate | 0.000% | — |
+| S2 / S3 recall | 97.860% / 97.768% | — |
+| India recall | 96.156% | 96.154% |
+| US recall | 98.920% | 98.914% |
+| Non-ASCII recall (315,564 links) | 93.969% | 93.767% |
+| Missing-target-address recall (66,865 links) | 88.810% | 88.949% |
+| Cross-country true links (unreachable by design) | 0 | — |
+
+## Candidate volume
+
+| Mean | Median | p90 | p95 | p99 | Max | Total pairs | Reduction vs same-country corpus |
+|---:|---:|---:|---:|---:|---:|---:|---:|
+| 545.5 | 542 | 640 | 679 | 731 | 1,242 | 240,814,697 | 99.98983% |
+
+Pilot: mean 544.8, median 541, p95 677, p99 729, max 791, reduction 99.98983%.
+
+### By country
+
+| Country | S1 | Links | Recall | Positive every-match | Non-ASCII | Missing address | Median | p95 | p99 | Max | Zero-cand. |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| India | 176,786 | 611,422 | 96.156% | 89.29% | 93.013% | 90.471% | 543 | 646 | 716 | 797 | 0.000% |
+| US | 264,681 | 914,609 | 98.920% | 96.42% | 97.457% | 87.887% | 541 | 691 | 736 | 1,242 | 0.000% |
+
+### By true match count
+
+| True matches | S1 | Links | Link recall | Every-match % | Mean candidates |
+|---|---:|---:|---:|---:|---:|
+| 0 | 24,662 | 0 | n/a | 100.00% | 548.7 |
+| 1 | 24,018 | 24,018 | 97.502% | 97.50% | 548.2 |
+| 2 | 75,036 | 150,072 | 97.756% | 95.86% | 547.4 |
+| 3 | 106,282 | 318,846 | 97.748% | 94.24% | 546.0 |
+| 4 | 97,329 | 389,316 | 97.824% | 93.00% | 544.8 |
+| 5 | 64,070 | 320,350 | 97.818% | 91.74% | 544.0 |
+| 6+ | 50,070 | 323,429 | 97.904% | 90.23% | 541.8 |
+
+Bucket 0 is singletons: every-match is vacuously satisfied.
+
+## Route contributions
+
+| Route | Alone: link recall | Alone: mean candidates | Unique true links |
+|---|---:|---:|---:|
+| exact_name | 21.866% | 9.8 | 0 |
+| name_char | 72.781% | 200.0 | 6,009 |
+| address_char | 90.360% | 200.0 | 307,697 |
+| name_word | 70.113% | 199.5 | 4,310 |
+| rare_name | 33.380% | 41.3 | 1,146 |
+| suffix_exact | 30.717% | 17.1 | 78 |
+
+| Cumulative step | Link recall | Candidates | Marginal true links | Marginal candidates |
+|---|---:|---:|---:|---:|
+| phase1a_union | 97.357% | 175,526,044 | 1,485,696 | 175,526,044 |
+| plus_B_name_word | 97.732% | 230,920,227 | 5,727 | 55,394,183 |
+| plus_C_rare_name | 97.807% | 240,478,958 | 1,146 | 9,558,731 |
+| plus_E_suffix_exact | 97.812% | 240,814,697 | 78 | 335,739 |
+
+Phase 1A fallback union on the same fold: recall 97.357%, positive every-match 92.19%, median/p95/max 397/400/1,241.
+
+RRF-ordered recall@k over the six-route union (constant 60; diagnostic ordering only): @10 64.972%, @20 70.984%, @50 80.667%, @100 93.700%, @200 96.768%.
+
+## Resources and reproducibility
+
+- Invocation wall time (this full-scope invocation): 0.05 h; all Phase 1C invocations: 13.58 h.
+- Peak process RSS: 4.93 GiB.
+- Query throughput (all routes, both sources): 2566.9 S1/s end to end.
+- Route shard footprint: 2.26 GiB under `artifacts/phase1c/work/` (retained for Phase 2).
+- Runtime by route (seconds, fit + query, all invocations): address_char 24,343, exact_name 65, name_char 15,889, name_word 4,579, rare_name 532, suffix_exact 135.
+- Resume evidence: 8 invocations recorded; see `run_manifest.json` → `invocations`.
+- Config `configs/phase1c_fold0.json`; environment, source hashes, input hashes, and output hashes are in `run_manifest.json`.
+- Pilot reproduction on shard 0: within the documented CPU-architecture float tolerance (non-float routes identical) (`artifacts/phase1c/pilot_reproduction.json`).
+

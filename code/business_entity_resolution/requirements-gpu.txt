@@ -1,0 +1,11 @@
+# GPU steps (cross-encoders, dense bi-encoder, reranker): kaggle_ce/ce_kernel.py and kaggle_ce/bi_kernel.py.
+# Exact versions recorded in every GPU run's train_log.json -> environment (Kaggle, Python 3.12.13, 2x Tesla T4).
+# torch is the Kaggle image's CUDA 12.8 build (2.10.0+cu128); elsewhere install the matching CUDA wheel of 2.10.0.
+torch==2.10.0
+transformers==5.0.0
+tokenizers==0.22.2
+numpy==2.4.2
+pyarrow==24.0.0
+# Pretrained weights (downloaded by the kernels; licence and revision are checked at load, see src/ce_model.py):
+#   intfloat/multilingual-e5-small  revision 614241f622f53c4eeff9890bdc4f31cfecc418b3  MIT         118M parameters
+#   BAAI/bge-reranker-v2-m3         revision 953dc6f6f85a1b2dbfca4c34a2796e7dde08d41e  Apache-2.0  568M parameters

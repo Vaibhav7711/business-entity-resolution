@@ -1,0 +1,380 @@
+{
+  "status": "complete",
+  "scope": "full",
+  "run_id": "phase1c_fold0_bce_v1",
+  "state": {
+    "run_id": "phase1c_fold0_bce_v1",
+    "algorithm_sha256": "ebf51b17a41f5e0115ff8289e6c0418e5a52f4eeb2f3b480be9bfc29dc2a3a22",
+    "order_sha256": "514d361ec431fb5a2821e062ca635da5548b3fc47f725273a1162aacda8e2dd3",
+    "fold_size": 441467,
+    "shard_size": 25000
+  },
+  "shards": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17
+  ],
+  "n_shards_in_fold": 18,
+  "fold_size": 441467,
+  "retrieval_pool_sizes_by_country_key": {
+    "india": 4133346,
+    "us": 6186873
+  },
+  "metrics": {
+    "selected_bce": {
+      "evaluated_s1": 441467,
+      "true_links": 1526031,
+      "retrieved_true_links": 1492647,
+      "positive_link_recall": 0.9781236423113292,
+      "positive_s1_with_every_true_match_pct": 93.56413670661341,
+      "all_s1_every_match_pct": 93.92366813374498,
+      "zero_candidate_rate": 0.0,
+      "candidate_count": {
+        "mean": 545.487424881135,
+        "median": 542.0,
+        "p90": 640.0,
+        "p95": 679.0,
+        "p99": 731.0,
+        "max": 1242,
+        "total": 240814697
+      },
+      "candidate_reduction_ratio": 0.9998983160024681,
+      "recall_by_country": {
+        "India": 0.961558465347992,
+        "US": 0.9891975696718488
+      },
+      "recall_by_source": {
+        "S2": 0.9786009846879,
+        "S3": 0.9776762478323681
+      },
+      "non_ascii_recall": 0.9396857689723797,
+      "missing_target_address_recall": 0.8881028938906752,
+      "by_match_count_bucket": {
+        "0": {
+          "s1": 24662,
+          "true_links": 0,
+          "link_recall": null,
+          "every_match_pct": 100.0,
+          "zero_candidate_rate": 0.0,
+          "candidate_mean": 548.6935366150353
+        },
+        "1": {
+          "s1": 24018,
+          "true_links": 24018,
+          "link_recall": 0.975018735948039,
+          "every_match_pct": 97.5018735948039,
+          "zero_candidate_rate": 0.0,
+          "candidate_mean": 548.208177200433
+        },
+        "2": {
+          "s1": 75036,
+          "true_links": 150072,
+          "link_recall": 0.9775641025641025,
+          "every_match_pct": 95.85932085932086,
+          "zero_candidate_rate": 0.0,
+          "candidate_mean": 547.4313796044565
+        },
+        "3": {
+          "s1": 106282,
+          "true_links": 318846,
+          "link_recall": 0.9774844282192657,
+          "every_match_pct": 94.23797068177113,
+          "zero_candidate_rate": 0.0,
+          "candidate_mean": 546.0365725146308
+        },
+        "4": {
+          "s1": 97329,
+          "true_links": 389316,
+          "link_recall": 0.9782438944199571,
+          "every_match_pct": 93.00311315229789,
+          "zero_candidate_rate": 0.0,
+          "candidate_mean": 544.8003678245949
+        },
+        "5": {
+          "s1": 64070,
+          "true_links": 320350,
+          "link_recall": 0.9781801154986733,
+          "every_match_pct": 91.7371624785391,
+          "zero_candidate_rate": 0.0,
+          "candidate_mean": 543.977149992196
+        },
+        "6+": {
+          "s1": 50070,
+          "true_links": 323429,
+          "link_recall": 0.9790433139885415,
+          "every_match_pct": 90.2336728579988,
+          "zero_candidate_rate": 0.0,
+          "candidate_mean": 541.7923307369682
+        }
+      },
+      "by_country": {
+        "India": {
+          "s1": 176786,
+          "true_links": 611422,
+          "link_recall": 0.961558465347992,
+          "positive_every_match_pct": 89.2880243394102,
+          "candidate_count": {
+            "mean": 549.3119590917833,
+            "median": 543.0,
+            "p90": 605.0,
+            "p95": 646.0,
+            "p99": 716.0,
+            "max": 797,
+            "total": 97110664
+          },
+          "zero_candidate_rate": 0.0,
+          "non_ascii_recall": 0.9301294706117457,
+          "missing_target_address_recall": 0.9047100690810131
+        },
+        "US": {
+          "s1": 264681,
+          "true_links": 914609,
+          "link_recall": 0.9891975696718488,
+          "positive_every_match_pct": 96.42200990261495,
+          "candidate_count": {
+            "mean": 542.9329381406296,
+            "median": 541.0,
+            "p90": 657.0,
+            "p95": 691.0,
+            "p99": 736.0,
+            "max": 1242,
+            "total": 143704033
+          },
+          "zero_candidate_rate": 0.0,
+          "non_ascii_recall": 0.9745664058470742,
+          "missing_target_address_recall": 0.8788738948348069
+        }
+      },
+      "positive_s1": 416805,
+      "singleton_s1": 24662,
+      "cross_country_true_links": 0,
+      "cross_country_true_links_retrieved": 0,
+      "non_ascii_true_links": 315564,
+      "missing_target_address_true_links": 66865,
+      "candidate_count_by_source": {
+        "S2": {
+          "mean": 273.616800349743,
+          "median": 272.0,
+          "p90": 321.0,
+          "p95": 341.0,
+          "p99": 368.0,
+          "max": 626,
+          "total": 120792788
+        },
+        "S3": {
+          "mean": 271.8706245313919,
+          "median": 270.0,
+          "p90": 321.0,
+          "p95": 341.0,
+          "p99": 368.0,
+          "max": 616,
+          "total": 120021909
+        }
+      },
+      "recall_at_k_rrf": {
+        "10": 0.6497187802869011,
+        "20": 0.709837480365733,
+        "50": 0.8066743074026674,
+        "100": 0.9369980033171017,
+        "200": 0.9676769344790506
+      }
+    },
+    "phase1a_union_fallback": {
+      "evaluated_s1": 441467,
+      "true_links": 1526031,
+      "retrieved_true_links": 1485696,
+      "positive_link_recall": 0.9735686889715871,
+      "positive_s1_with_every_true_match_pct": 92.19371168771967,
+      "all_s1_every_match_pct": 92.6298001889156,
+      "zero_candidate_rate": 0.0,
+      "candidate_count": {
+        "mean": 397.5972020558728,
+        "median": 397.0,
+        "p90": 399.0,
+        "p95": 400.0,
+        "p99": 414.0,
+        "max": 1241,
+        "total": 175526044
+      },
+      "candidate_reduction_ratio": 0.9999258841339536,
+      "recall_by_country": {
+        "India": 0.9551095642616719,
+        "US": 0.9859087325840878
+      },
+      "recall_by_source": {
+        "S2": 0.9754017648532788,
+        "S3": 0.971850618108327
+      },
+      "non_ascii_recall": 0.9352809572701576,
+      "missing_target_address_recall": 0.8366858595677859
+    },
+    "route_contributions": {
+      "route_alone": {
+        "exact_name": {
+          "retrieved_true_links": 333676,
+          "link_recall": 0.21865610855873832,
+          "candidate_total": 4340034,
+          "candidate_mean": 9.83093640068227,
+          "candidate_median": 1.0
+        },
+        "name_char": {
+          "retrieved_true_links": 1110666,
+          "link_recall": 0.7278135241027214,
+          "candidate_total": 88288400,
+          "candidate_mean": 199.9886741251328,
+          "candidate_median": 200.0
+        },
+        "address_char": {
+          "retrieved_true_links": 1378921,
+          "link_recall": 0.903599599221772,
+          "candidate_total": 88293100,
+          "candidate_mean": 199.99932044750796,
+          "candidate_median": 200.0
+        },
+        "name_word": {
+          "retrieved_true_links": 1069948,
+          "link_recall": 0.7011312352108181,
+          "candidate_total": 88094223,
+          "candidate_mean": 199.548829244315,
+          "candidate_median": 200.0
+        },
+        "rare_name": {
+          "retrieved_true_links": 509386,
+          "link_recall": 0.3337979372633977,
+          "candidate_total": 18251602,
+          "candidate_mean": 41.34307207560248,
+          "candidate_median": 0.0
+        },
+        "suffix_exact": {
+          "retrieved_true_links": 468752,
+          "link_recall": 0.3071706931248448,
+          "candidate_total": 7545476,
+          "candidate_mean": 17.09182339789837,
+          "candidate_median": 2.0
+        }
+      },
+      "unique_true_links": {
+        "exact_name": 0,
+        "name_char": 6009,
+        "address_char": 307697,
+        "name_word": 4310,
+        "rare_name": 1146,
+        "suffix_exact": 78
+      },
+      "cumulative": {
+        "phase1a_union": {
+          "retrieved_true_links": 1485696,
+          "link_recall": 0.9735686889715871,
+          "candidate_total": 175526044,
+          "marginal_true_links": 1485696,
+          "marginal_candidates": 175526044
+        },
+        "plus_B_name_word": {
+          "retrieved_true_links": 1491423,
+          "link_recall": 0.9773215616196526,
+          "candidate_total": 230920227,
+          "marginal_true_links": 5727,
+          "marginal_candidates": 55394183
+        },
+        "plus_C_rare_name": {
+          "retrieved_true_links": 1492569,
+          "link_recall": 0.9780725293260752,
+          "candidate_total": 240478958,
+          "marginal_true_links": 1146,
+          "marginal_candidates": 9558731
+        },
+        "plus_E_suffix_exact": {
+          "retrieved_true_links": 1492647,
+          "link_recall": 0.9781236423113292,
+          "candidate_total": 240814697,
+          "marginal_true_links": 78,
+          "marginal_candidates": 335739
+        }
+      }
+    }
+  },
+  "evaluation_seconds": 145.26572644000044,
+  "evaluation_peak_rss": 1291812864,
+  "invocation": {
+    "invocation_id": "8a21a2d53e9b",
+    "scope": "full",
+    "started": "2026-09-25T20:06:49",
+    "pid": 1534,
+    "stop_after_tasks": null,
+    "tasks_completed": 0,
+    "tasks_skipped": 432,
+    "partitions_scanned": [],
+    "partitions_skipped": [
+      "S2/india",
+      "S2/us",
+      "S3/india",
+      "S3/us"
+    ],
+    "fits": [],
+    "filters": {
+      "sources": null,
+      "countries": null,
+      "routes": null
+    },
+    "status": "complete",
+    "finished": "2026-09-25T20:09:37",
+    "wall_seconds": 171.98706322900034,
+    "peak_rss": 1291522048
+  },
+  "gate": {
+    "checks": {
+      "link_recall_within_0.5pp": true,
+      "positive_every_match_within_1pp": true,
+      "p95_candidates_at_most_800": true,
+      "no_slice_drop_over_2pp": true,
+      "pilot_reproduced_exact_or_within_platform_tolerance": true
+    },
+    "slices_vs_pilot": {
+      "India recall": {
+        "observed": 0.961558465347992,
+        "pilot": 0.9615384615384616,
+        "delta_pp": 0.002000380953048886,
+        "collapsed": false
+      },
+      "US recall": {
+        "observed": 0.9891975696718488,
+        "pilot": 0.9891363707286628,
+        "delta_pp": 0.006119894318601382,
+        "collapsed": false
+      },
+      "non_ascii_recall": {
+        "observed": 0.9396857689723797,
+        "pilot": 0.9376732837972718,
+        "delta_pp": 0.2012485175107881,
+        "collapsed": false
+      },
+      "missing_target_address_recall": {
+        "observed": 0.8881028938906752,
+        "pilot": 0.8894858019953953,
+        "delta_pp": -0.1382908104720082,
+        "collapsed": false
+      }
+    },
+    "passed": true,
+    "pilot_reproduction_basis": "platform_float_tolerance"
+  },
+  "pilot_reference_slices": {
+    "India recall": "96.154%",
+    "US recall": "98.914%"
+  }
+}

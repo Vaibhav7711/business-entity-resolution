@@ -1,0 +1,35 @@
+{
+  "run_id": "k1_filter_v1",
+  "description": "K1 experiment: learned first-stage candidate filter on the full fold-0 Phase 1C (Kaggle reference-platform) candidates, plus full-scale error-structure analysis. The frozen blocker is not changed; the filter is adopted only if it passes the gates below.",
+  "inputs": {
+    "phase1c_config": "configs/phase1c_fold0.json",
+    "phase1c_manifest": "artifacts/phase1c/run_manifest.json",
+    "train_dir": "student_resource/dataset/train",
+    "folds": "artifacts/folds.tsv"
+  },
+  "split": {
+    "unit": "Source 1 entity (fold-0 BLAKE2b rank position); all candidates of an S1 stay in one split",
+    "train": [0, 331000],
+    "validation": [331000, 386000],
+    "holdout": [386000, 441467]
+  },
+  "chunk_s1": 1000,
+  "rrf_constant": 60,
+  "tokens": {"digits": 4, "name": 8, "address": 10},
+  "sampling": {"seed": 20260925, "top_rrf_negatives": 20, "random_negatives": 20},
+  "oof_folds": 3,
+  "lightgbm": {
+    "objective": "binary", "learning_rate": 0.15, "num_leaves": 31, "min_data_in_leaf": 200,
+    "feature_fraction": 0.9, "bagging_fraction": 0.8, "bagging_freq": 1, "lambda_l2": 1.0,
+    "num_boost_round": 300, "early_stopping_rounds": 20, "seed": 20260925,
+    "deterministic": true, "force_col_wise": true, "num_threads": 2, "verbosity": -1
+  },
+  "keep_top": 200,
+  "k_grid": [10, 20, 30, 40, 50, 60, 70, 80, 100, 120, 150, 200],
+  "gates": {
+    "retention_target": 0.998,
+    "max_k": 150,
+    "transfer": {"train_country_key": "us", "eval_country_key": "india"}
+  },
+  "test_s1_count": 1732544
+}

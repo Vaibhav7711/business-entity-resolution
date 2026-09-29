@@ -1,0 +1,26 @@
+{
+  "run_id": "r3_name_embeddings_v1",
+  "purpose": "Multilingual name vectors for every train and test record, for a pair-level name-similarity feature group in K2-final/K3-final (adopted only if it passes the pre-registered ablation rule).",
+  "inputs": {
+    "train_dir": "student_resource/dataset/train",
+    "test_dir": "student_resource/dataset/test",
+    "folds": "artifacts/folds.tsv"
+  },
+  "files": [["train", 1], ["train", 2], ["train", 3], ["test", 1], ["test", 2], ["test", 3]],
+  "candidates": [
+    {"name": "multilingual-e5-small", "repo": "intfloat/multilingual-e5-small", "prefix": "query: ", "cost": 1},
+    {"name": "paraphrase-multilingual-MiniLM-L12-v2", "repo": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2", "prefix": "", "cost": 1},
+    {"name": "LaBSE", "repo": "sentence-transformers/LaBSE", "prefix": "", "cost": 3}
+  ],
+  "allowed_licenses": ["mit", "apache-2.0"],
+  "diagnostic": {
+    "seed": 20260926,
+    "s1_sample": 20000,
+    "exclude_folds": [0],
+    "weak_string_threshold": 0.5,
+    "selection": "highest out-of-fold AUC of logistic(string similarity, cosine, product) for true pairs vs same-address negatives; a cheaper model within speed_tie_margin wins",
+    "speed_tie_margin": 0.002
+  },
+  "encode": {"max_seq_length": 32, "batch_size": 512, "chunk_texts": 200000, "fp16": true},
+  "pca": {"dims": 128, "fit_sample": 1000000, "seed": 20260926}
+}

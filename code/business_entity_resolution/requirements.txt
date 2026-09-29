@@ -1,0 +1,14 @@
+# CPU pipeline: blocking, K1 filter, candidate lists, features, decision stage, France rule, tests, Kaggle driver.
+# Exact versions of the environment that produced output/ (Python 3.12.3, x86_64 Linux, Intel Xeon).
+# Licences checked before installation: sparse-dot-topn Apache-2.0; rapidfuzz MIT; lightgbm MIT.
+numpy==2.4.2
+scipy==1.17.1
+scikit-learn==1.8.0
+psutil==7.2.2
+sparse-dot-topn==1.2.0
+rapidfuzz==3.14.3
+lightgbm==4.6.0
+pyarrow==25.0.1
+pandas==3.0.6
+pytest==9.1.1
+kaggle==2.2.4

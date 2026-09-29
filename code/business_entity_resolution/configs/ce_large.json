@@ -1,0 +1,26 @@
+{
+  "backbone": "intfloat/multilingual-e5-large",
+  "allowed_licenses": [
+    "mit",
+    "apache-2.0"
+  ],
+  "max_length": 128,
+  "train_s1": 150000,
+  "neg_top": 12,
+  "neg_random": 4,
+  "max_train_pairs": 2000000,
+  "epochs": 1,
+  "lr": 2e-05,
+  "warmup": 0.05,
+  "weight_decay": 0.01,
+  "freeze_word_embeddings": true,
+  "batch_size": 32,
+  "score_batch_size": 512,
+  "train_minutes": 180,
+  "seed": 20260927,
+  "log_every": 500,
+  "test_budget_minutes": 180,
+  "min_k": 10,
+  "max_k": 40,
+  "purpose": "Round 2: the largest MIT/Apache multilingual cross-encoder that fits 2xT4 (560M params); trained on the same fold-0 pairs, it rescores only round 1's top candidates per S1."
+}

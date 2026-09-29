@@ -1,0 +1,115 @@
+{
+  "run_id": "k2_matcher_v1",
+  "description": "K2: stage-2 matcher experiments on the full fold-0 candidate universe (Kaggle reference-platform Phase 1C shards), filtered by the K1 first-stage model. Pre-registered decision rules below; holdout opened once for the champion.",
+  "inputs": {
+    "phase1c_config": "configs/phase1c_fold0.json",
+    "phase1c_manifest": "artifacts/phase1c/run_manifest.json",
+    "train_dir": "student_resource/dataset/train",
+    "folds": "artifacts/folds.tsv"
+  },
+  "split": {
+    "unit": "Source 1 entity (fold-0 BLAKE2b rank position); all candidates of an S1 stay in one split",
+    "train": [
+      0,
+      331000
+    ],
+    "validation": [
+      331000,
+      386000
+    ],
+    "holdout": [
+      386000,
+      441467
+    ]
+  },
+  "chunk_s1": 1000,
+  "rrf_constant": 60,
+  "tokens": {
+    "digits": 4,
+    "name": 8,
+    "address": 10
+  },
+  "oof_folds": 3,
+  "filter": {
+    "k_override": null,
+    "fallback_k": 200,
+    "retention_target": 0.998,
+    "max_k": 150,
+    "require_transfer": true
+  },
+  "substitutions": {
+    "min_count": 30,
+    "min_share": 0.5
+  },
+  "train_sampling": {
+    "seed": 20260925,
+    "top_filter_negatives": 20,
+    "random_negatives": 10
+  },
+  "lightgbm_ablation": {
+    "objective": "binary",
+    "learning_rate": 0.15,
+    "num_leaves": 127,
+    "min_data_in_leaf": 200,
+    "feature_fraction": 0.8,
+    "bagging_fraction": 0.8,
+    "bagging_freq": 1,
+    "lambda_l2": 1.0,
+    "num_boost_round": 2000,
+    "early_stopping_rounds": 50,
+    "seed": 20260925,
+    "deterministic": true,
+    "force_col_wise": true,
+    "num_threads": 4,
+    "verbosity": -1,
+    "max_bin": 127
+  },
+  "lightgbm_champion": {
+    "objective": "binary",
+    "learning_rate": 0.05,
+    "num_leaves": 127,
+    "min_data_in_leaf": 200,
+    "feature_fraction": 0.8,
+    "bagging_fraction": 0.8,
+    "bagging_freq": 1,
+    "lambda_l2": 1.0,
+    "num_boost_round": 5000,
+    "early_stopping_rounds": 150,
+    "seed": 20260925,
+    "deterministic": true,
+    "force_col_wise": true,
+    "num_threads": 4,
+    "verbosity": -1,
+    "max_bin": 255
+  },
+  "experiments": {
+    "E0_train_s1": 50000,
+    "ablation_train_s1": 150000,
+    "learning_curve": [
+      50000,
+      150000,
+      331000
+    ],
+    "oof_train_s1_per_fold": 110000,
+    "transfer_train_s1": 150000,
+    "bootstrap": 1000
+  },
+  "thresholds": {
+    "grid": 97,
+    "empty_guard_grid": 11
+  },
+  "workers": 4,
+  "decision": {
+    "min_gain": 0.002,
+    "max_slice_drop": 0.005,
+    "reassign_min_precision": 0.95,
+    "lc_more_data_gain": 0.003,
+    "transfer_drop_alarm": 0.03
+  },
+  "extra_train_folds": [
+    1,
+    2,
+    3,
+    4
+  ]
+}

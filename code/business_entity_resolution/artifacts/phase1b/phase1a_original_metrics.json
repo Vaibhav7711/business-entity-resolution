@@ -1,0 +1,256 @@
+{
+  "config": {
+    "seed": 20260925,
+    "sample_size": 25000,
+    "validation_fold": 0,
+    "top_k_per_source": 100,
+    "ngram_range": [
+      3,
+      4
+    ],
+    "hash_features": 262144,
+    "max_document_frequency": 0.01,
+    "query_batch_size": 64,
+    "threads": 4,
+    "dependencies": {
+      "sparse-dot-topn": {
+        "version": "1.2.0",
+        "license": "Apache-2.0",
+        "license_verified_before_install": true,
+        "source": "https://pypi.org/project/sparse-dot-topn/"
+      }
+    }
+  },
+  "sample": {
+    "size": 25000,
+    "validation_fold": 0,
+    "selection": "25,000 smallest BLAKE2b(seed:S1 ID) digests within fold 0",
+    "country_counts": {
+      "US": 14875,
+      "India": 10125
+    },
+    "true_links": 86372,
+    "singleton_count": 1400
+  },
+  "routes": {
+    "exact_name": {
+      "positive_link_candidate_recall": 0.21843884592228963,
+      "retrieved_true_links": 18867,
+      "true_links": 86372,
+      "entities_with_every_true_match_pct": 8.316,
+      "positive_entities_with_every_true_match_pct": 2.8771186440677967,
+      "recall_at": {
+        "10": 0.19346547492242858,
+        "20": 0.20066688278608807,
+        "50": 0.2096975871810309,
+        "100": 0.21518547677488076,
+        "200": 0.21783679896262678
+      },
+      "candidate_count_per_s1": {
+        "median": 1.0,
+        "p90": 16.0,
+        "p95": 61.0,
+        "p99": 178.0,
+        "max": 458
+      },
+      "zero_candidate_rate": 0.29044,
+      "candidate_recall_by_source": {
+        "S2": 0.21717653796592373,
+        "S3": 0.21962848018710926
+      },
+      "candidate_recall_by_country": {
+        "India": {
+          "sampled_s1": 10125,
+          "true_links": 35100,
+          "candidate_recall": 0.15715099715099715
+        },
+        "US": {
+          "sampled_s1": 14875,
+          "true_links": 51272,
+          "candidate_recall": 0.260395537525355
+        }
+      },
+      "non_ascii_records": {
+        "true_links": 18034,
+        "retrieved_true_links": 1221,
+        "candidate_recall": 0.06770544527004548
+      },
+      "target_address_missing": {
+        "true_links": 3909,
+        "retrieved_true_links": 1015,
+        "candidate_recall": 0.2596572013302635
+      }
+    },
+    "name_tfidf": {
+      "positive_link_candidate_recall": 0.7283378872782846,
+      "retrieved_true_links": 62908,
+      "true_links": 86372,
+      "entities_with_every_true_match_pct": 50.076,
+      "positive_entities_with_every_true_match_pct": 47.11440677966102,
+      "recall_at": {
+        "10": 0.5033112582781457,
+        "20": 0.5669661464363451,
+        "50": 0.6371277728893623,
+        "100": 0.6867966470615477,
+        "200": 0.7283378872782846
+      },
+      "candidate_count_per_s1": {
+        "median": 200.0,
+        "p90": 200.0,
+        "p95": 200.0,
+        "p99": 200.0,
+        "max": 200
+      },
+      "zero_candidate_rate": 0.00012,
+      "candidate_recall_by_source": {
+        "S2": 0.7323294993557009,
+        "S3": 0.7245760806009086
+      },
+      "candidate_recall_by_country": {
+        "India": {
+          "sampled_s1": 10125,
+          "true_links": 35100,
+          "candidate_recall": 0.6427350427350428
+        },
+        "US": {
+          "sampled_s1": 14875,
+          "true_links": 51272,
+          "candidate_recall": 0.7869402402870963
+        }
+      },
+      "non_ascii_records": {
+        "true_links": 18034,
+        "retrieved_true_links": 8594,
+        "candidate_recall": 0.47654430520128643
+      },
+      "target_address_missing": {
+        "true_links": 3909,
+        "retrieved_true_links": 3259,
+        "candidate_recall": 0.833717063187516
+      }
+    },
+    "address_tfidf": {
+      "positive_link_candidate_recall": 0.9011253647015236,
+      "retrieved_true_links": 77832,
+      "true_links": 86372,
+      "entities_with_every_true_match_pct": 74.74,
+      "positive_entities_with_every_true_match_pct": 73.24152542372882,
+      "recall_at": {
+        "10": 0.7988700041680175,
+        "20": 0.8415342935210485,
+        "50": 0.8717176862872227,
+        "100": 0.8862247024498681,
+        "200": 0.9011253647015236
+      },
+      "candidate_count_per_s1": {
+        "median": 200.0,
+        "p90": 200.0,
+        "p95": 200.0,
+        "p99": 200.0,
+        "max": 200
+      },
+      "zero_candidate_rate": 0.0,
+      "candidate_recall_by_source": {
+        "S2": 0.916909273135112,
+        "S3": 0.886250168668196
+      },
+      "candidate_recall_by_country": {
+        "India": {
+          "sampled_s1": 10125,
+          "true_links": 35100,
+          "candidate_recall": 0.8713390313390313
+        },
+        "US": {
+          "sampled_s1": 14875,
+          "true_links": 51272,
+          "candidate_recall": 0.9215166172569824
+        }
+      },
+      "non_ascii_records": {
+        "true_links": 18034,
+        "retrieved_true_links": 16001,
+        "candidate_recall": 0.8872684928468448
+      },
+      "target_address_missing": {
+        "true_links": 3909,
+        "retrieved_true_links": 0,
+        "candidate_recall": 0.0
+      }
+    },
+    "union": {
+      "positive_link_candidate_recall": 0.9729773537720557,
+      "retrieved_true_links": 84038,
+      "true_links": 86372,
+      "entities_with_every_true_match_pct": 92.484,
+      "positive_entities_with_every_true_match_pct": 92.03813559322033,
+      "recall_at": {
+        "10": 0.7885773167230121,
+        "20": 0.8677233362663826,
+        "50": 0.917519566526189,
+        "100": 0.9550201454174964,
+        "200": 0.9651160098179966
+      },
+      "candidate_count_per_s1": {
+        "median": 397.0,
+        "p90": 399.0,
+        "p95": 400.0,
+        "p99": 416.0,
+        "max": 698
+      },
+      "zero_candidate_rate": 0.0,
+      "candidate_recall_by_source": {
+        "S2": 0.9746575669355224,
+        "S3": 0.971393873971124
+      },
+      "candidate_recall_by_country": {
+        "India": {
+          "sampled_s1": 10125,
+          "true_links": 35100,
+          "candidate_recall": 0.9544444444444444
+        },
+        "US": {
+          "sampled_s1": 14875,
+          "true_links": 51272,
+          "candidate_recall": 0.9856646902792947
+        }
+      },
+      "non_ascii_records": {
+        "true_links": 18034,
+        "retrieved_true_links": 16830,
+        "candidate_recall": 0.9332372185871133
+      },
+      "target_address_missing": {
+        "true_links": 3909,
+        "retrieved_true_links": 3264,
+        "candidate_recall": 0.8349961627014582
+      }
+    }
+  },
+  "unique_additional_true_links": {
+    "exact_name": 7,
+    "name_tfidf": 4349,
+    "address_tfidf": 21034
+  },
+  "runtime_seconds": 1552.0345086660236,
+  "stage_runtime_seconds": {
+    "S2/india/name_tfidf": 66.38958620745689,
+    "S2/india/address_tfidf": 188.50466258265078,
+    "S2/india/total": 303.3946374170482,
+    "S2/us/name_tfidf": 176.1655163327232,
+    "S2/us/address_tfidf": 216.1182247074321,
+    "S2/us/total": 436.6182471252978,
+    "S2/total": 742.3493823325261,
+    "S3/india/name_tfidf": 65.43357241619378,
+    "S3/india/address_tfidf": 217.72074212506413,
+    "S3/india/total": 331.92194658424705,
+    "S3/us/name_tfidf": 159.73882208298892,
+    "S3/us/address_tfidf": 229.54714833479375,
+    "S3/us/total": 440.40471629053354,
+    "S3/total": 774.9162296243012
+  },
+  "peak_ram_bytes": 2215903232,
+  "software": {
+    "python": "3.12.1",
+    "numpy": "2.4.2"
+  }
+}

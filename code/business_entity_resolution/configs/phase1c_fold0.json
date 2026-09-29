@@ -1,0 +1,112 @@
+{
+  "run_id": "phase1c_fold0_bce_v1",
+  "phase1b_selected_mask": 22,
+  "algorithm": {
+    "seed": 20260925,
+    "validation_fold": 0,
+    "query_order": "ascending BLAKE2b(seed:S1 ID, digest_size=8) within the validation fold; first 25,000 = Phase 1A/1B pilot sample",
+    "shard_size": 25000,
+    "routes": [
+      "exact_name",
+      "name_char",
+      "address_char",
+      "name_word",
+      "rare_name",
+      "suffix_exact"
+    ],
+    "char_ngram_range": [
+      3,
+      4
+    ],
+    "char_hash_features": 262144,
+    "char_max_document_frequency": 0.01,
+    "char_top_k_per_source": 100,
+    "word_ngram_range": [
+      1,
+      2
+    ],
+    "word_hash_features": 262144,
+    "word_max_document_frequency": 0.1,
+    "word_top_k_per_source": 100,
+    "rare_name_max_document_frequency": 128,
+    "rare_name_max_query_tokens": 2,
+    "rare_name_top_k_per_source": 100,
+    "legal_suffix_source": "student_resource/README.md:38",
+    "legal_suffix_spellings": [
+      "corp",
+      "corporation",
+      "pvt",
+      "private",
+      "ltd",
+      "limited"
+    ],
+    "target_sources": [
+      2,
+      3
+    ]
+  },
+  "operational": {
+    "query_batch_size": 512,
+    "threads": 4,
+    "benchmark_shards": 3,
+    "rrf_constant": 60,
+    "recall_at_k": [
+      10,
+      20,
+      50,
+      100,
+      200
+    ],
+    "min_available_memory_gib": 1.5,
+    "max_memory_wait_seconds": 1800
+  },
+  "paths": {
+    "train_dir": "student_resource/dataset/train",
+    "folds": "artifacts/folds.tsv",
+    "work_dir": "artifacts/phase1c/work",
+    "output_dir": "artifacts/phase1c"
+  },
+  "pilot_reference": {
+    "sample_size": 25000,
+    "phase1a_config": "configs/phase1a_pilot.json",
+    "phase1b_config": "configs/phase1b_pilot.json",
+    "phase1a_metrics": "artifacts/phase1a/pilot_metrics.json",
+    "phase1b_metrics": "artifacts/phase1b/pilot_metrics.json",
+    "phase1a_candidates": "artifacts/phase1a/pilot_candidates.npz",
+    "phase1b_candidates": "artifacts/phase1b/route_candidates.npz",
+    "expected_sha256": {
+      "artifacts/phase1b/pilot_metrics.json": "976eb50757f726239a1c8b4f05547c5fe5239866580262f4c139e24f711a5da0",
+      "configs/phase1b_pilot.json": "d336cc7664d65bce49ad245d86f5f3108d7f9902c863660ee9aae7d73a6dbdcf"
+    },
+    "nonfloat_shard0_id_sha256": {
+      "S2/india/exact_name": "5d904236c87289170f456cab2f3c01e0afc1fc05adf246bc44db9550207c5a41",
+      "S2/india/rare_name": "5e80d48df322d6b9c5862d767ef9f6bc5e89796046f0a8beb07444ac020e8c23",
+      "S2/india/suffix_exact": "6d73f6f5b13fd7ee95f7c399cce5cb6c0404d5833f313fe7bcedb9871e991d6c",
+      "S2/us/exact_name": "69b6879eda6e15bf3b786ee6e0bc4962d6ab7fbb52af95c0e484bc4f952f2426",
+      "S2/us/rare_name": "65570d41764dd2a2a1aabc5d98c47a3c322ee9d5d19375fecaba124a74997af0",
+      "S2/us/suffix_exact": "17fe12e504110baf804c34df2b8e0d6246110bc23b9b416ebcb20defb39d508d",
+      "S3/india/exact_name": "373ee0003b5472802a6227c5a94cd43e83f23b18b0f006513406d2b346c515e0",
+      "S3/india/rare_name": "074414fa50dbe0f7ee25fa0b4bcd39126939f6a9b0554eb6b2d591034e29af15",
+      "S3/india/suffix_exact": "f438186661a07b57b26b0bba307735a9923feb6ac414847aaec782d6448b926c",
+      "S3/us/exact_name": "4a13b5431bc01cd6e416d7e71b565cb0ab74c9013bf4ad86d30b0c54a340e2c0",
+      "S3/us/rare_name": "567b7ef11ec3d4e9b5d2e93083a2724c3961cccd571d3a56be526a9d3a77c033",
+      "S3/us/suffix_exact": "4253c385d8c498ab0c3312cd4495b6cc51942567e322bdf7c287bdfce8030671"
+    }
+  },
+  "retention_policy": "Route shards under artifacts/phase1c/work/shards are retained as the frozen fold-0 candidate source for Phase 2 (per-route IDs, per-source ranks, scores). Nothing is deleted automatically; removal requires an explicit user decision after Phase 2 has consumed or regenerated them.",
+  "gate": {
+    "pilot_link_recall": 0.9779210855369795,
+    "pilot_positive_every_match_pct": 93.5,
+    "max_link_recall_drop_pp": 0.5,
+    "max_every_match_drop_pp": 1.0,
+    "max_p95_candidates": 800,
+    "accept_platform_float_tolerance": true,
+    "platform_tolerance": {
+      "reason": "Measured on Colab x86 (Intel Xeon) vs Apple M1: exact/rare/suffix shards bit-identical; TF-IDF top-k near-ties swap IDs; pilot effect 1 link of 86,372 (artifacts/phase1c/colab_pilot_diagnosis.md). The chosen run platform must also produce Phase 2 and test candidates.",
+      "max_retrieved_link_diff": 10,
+      "max_every_match_pp_diff": 0.05,
+      "max_candidate_total_rel_diff": 0.0001,
+      "require_equal_percentiles": true
+    }
+  }
+}

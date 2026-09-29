@@ -1,0 +1,25 @@
+{
+  "backbone": "intfloat/multilingual-e5-small",
+  "allowed_licenses": [
+    "mit",
+    "apache-2.0"
+  ],
+  "max_length": 128,
+  "train_s1": 200000,
+  "neg_top": 12,
+  "neg_random": 4,
+  "max_train_pairs": 4000000,
+  "epochs": 1,
+  "lr": 5e-05,
+  "warmup": 0.05,
+  "weight_decay": 0.01,
+  "freeze_word_embeddings": true,
+  "batch_size": 128,
+  "score_batch_size": 1024,
+  "train_minutes": 75,
+  "seed": 20260927,
+  "log_every": 200,
+  "test_budget_minutes": 180,
+  "min_k": 10,
+  "max_k": 40
+}

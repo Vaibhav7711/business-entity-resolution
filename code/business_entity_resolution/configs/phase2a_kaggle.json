@@ -1,0 +1,79 @@
+{
+  "run_id": "phase2a_bench75k_kaggle_v1",
+  "description": "Phase 2A candidate-only pair-scoring baseline on the 75k benchmark candidate universe (fold-0 positions 0-74,999; frozen B+C+E blocker), with candidates generated on the Kaggle CPU reference platform in a separate benchmark work directory (artifacts/phase1c/work_bench), never the full Phase 1C run's directory.",
+  "inputs": {
+    "phase1c_config": "configs/phase1c_fold0.json",
+    "phase1c_work_dir": "artifacts/phase1c/work_bench",
+    "benchmark_shards": [
+      0,
+      1,
+      2
+    ],
+    "train_dir": "student_resource/dataset/train",
+    "folds": "artifacts/folds.tsv"
+  },
+  "split": {
+    "unit": "Source 1 entity (fold-0 BLAKE2b rank position); all pairs of an entity stay in one split",
+    "train": [
+      0,
+      50000
+    ],
+    "validation": [
+      50000,
+      62000
+    ],
+    "holdout": [
+      62000,
+      75000
+    ],
+    "boundary_note": "Boundaries are multiples of chunk_s1 (1,000); set before any model was trained."
+  },
+  "sampling": {
+    "seed": 20260925,
+    "hard_negatives_per_s1": 10,
+    "random_negatives_per_s1": 10,
+    "note": "Train only: every retrieved positive, the top-RRF negatives, and seeded random negatives. Validation and holdout use every candidate pair (natural distribution)."
+  },
+  "chunk_s1": 1000,
+  "rrf_constant": 60,
+  "resources": {
+    "threads": 4,
+    "n_jobs": 4,
+    "min_available_memory_gib": 1.5,
+    "max_swap_growth_gib": 0.75
+  },
+  "models": {
+    "logistic": {
+      "C": [
+        0.1,
+        1.0
+      ],
+      "max_iter": 2000,
+      "class_weight": null
+    },
+    "lightgbm": {
+      "objective": "binary",
+      "learning_rate": 0.05,
+      "num_leaves": 63,
+      "min_data_in_leaf": 100,
+      "feature_fraction": 0.9,
+      "bagging_fraction": 0.8,
+      "bagging_freq": 1,
+      "lambda_l2": 1.0,
+      "num_boost_round": 1000,
+      "early_stopping_rounds": 50,
+      "seed": 20260925,
+      "deterministic": true,
+      "force_col_wise": true,
+      "num_threads": 4,
+      "verbosity": -1
+    }
+  },
+  "thresholds": {
+    "grid": 81,
+    "empty_guard_grid": 11
+  },
+  "paths": {
+    "output_dir": "artifacts/phase2a"
+  }
+}

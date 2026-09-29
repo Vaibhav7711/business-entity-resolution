@@ -1,0 +1,44 @@
+[09:13:17] context: 441,467 fold S1; countries ['india', 'us']
+[09:17:18] stores: S2 done (5,034,616 targets)
+[09:21:41] stores: S3 done (10,320,219 targets)
+[09:21:58] stores: complete (10,320,219 targets, 441,467 S1)
+[09:22:31] sample: shard 0 done
+[09:23:03] sample: shard 1 done
+[09:23:35] sample: shard 2 done
+[09:24:07] sample: shard 3 done
+[09:24:39] sample: shard 4 done
+[09:25:10] sample: shard 5 done
+[09:25:42] sample: shard 6 done
+[09:26:15] sample: shard 7 done
+[09:26:47] sample: shard 8 done
+[09:27:19] sample: shard 9 done
+[09:27:58] sample: shard 10 done
+[09:28:30] sample: shard 11 done
+[09:29:03] sample: shard 12 done
+[09:29:33] sample: shard 13 done
+[09:30:03] sample: shard 14 done
+[09:30:16] sample: shard 15 done
+[09:41:37] train: filter_fold0 best_iteration=300 in 663s
+[09:52:45] train: filter_fold1 best_iteration=300 in 668s
+[10:04:00] train: filter_fold2 best_iteration=300 in 675s
+[10:20:17] train: filter_final best_iteration=300 in 978s
+[10:28:43] train: filter_transfer best_iteration=249 in 506s
+[10:33:47] score: shard 0 done in 292s
+[10:38:22] score: shard 1 done in 276s
+[10:43:03] score: shard 2 done in 280s
+[10:47:37] score: shard 3 done in 274s
+[10:52:17] score: shard 4 done in 281s
+[10:56:54] score: shard 5 done in 277s
+[11:01:33] score: shard 6 done in 279s
+[11:06:07] score: shard 7 done in 274s
+[11:10:49] score: shard 8 done in 282s
+[11:15:22] score: shard 9 done in 274s
+[11:20:02] score: shard 10 done in 279s
+[11:24:36] score: shard 11 done in 275s
+[11:29:10] score: shard 12 done in 274s
+[11:35:26] score: shard 13 done in 376s
+[11:41:52] score: shard 14 done in 386s
+[11:47:28] score: shard 15 done in 336s
+[11:52:37] score: shard 16 done in 309s
+[11:55:56] score: shard 17 done in 199s
+[11:55:58] report: {"retention_target": 0.998, "chosen_k": 30, "validation_retention": 0.9983350306322034, "holdout_retention": 0.9984267841334513, "transfer_retention": 0.988231591335167, "validation_oracle_f05_at_k": 0.9918756297610409, "validation_oracle_f05_no_filter": 0.9923861179941748, "mean_kept_candidates": 30.0, "projected_test_pairs": 51976320.0, "projected_test_pairs_no_filter": 944467128.8576, "gates": {"validation_retention": true, "holdout_retention": true, "transfer_retention": false, "k_at_most_max": true}, "passed_k1_gates": false, "pending_gate": "end-to-end matcher F0.5 with vs without filter within 0.001 (measured in K2)"}

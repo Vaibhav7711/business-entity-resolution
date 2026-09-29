@@ -1,0 +1,9 @@
+{
+  "run_id": "k3_inference_v1",
+  "description": "K3: test inference with the frozen blocker's test candidates, the K1 filter (final model, K from K2's filter_choice.json), and the K2 champion + calibrator + policy. IDF, number-key density, and token stores are fit on the test corpus being searched, mirroring training. No labels are read.",
+  "inputs": {"phase1c_config": "configs/phase1c_fold0.json", "train_dir": "student_resource/dataset/train"},
+  "chunk_s1": 1000,
+  "rrf_constant": 60,
+  "tokens": {"digits": 4, "name": 8, "address": 10},
+  "workers": 4
+}

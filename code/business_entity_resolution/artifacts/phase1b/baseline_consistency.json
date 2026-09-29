@@ -1,0 +1,15 @@
+{
+  "all_equal": true,
+  "checks": {
+    "retrieved_true_links": true,
+    "candidate_count_total": true,
+    "candidate_count_median": true,
+    "positive_link_recall": true,
+    "positive_s1_every_match_pct": true,
+    "non_ascii_recall": true,
+    "missing_target_address_recall": true,
+    "candidate_reduction_ratio": true,
+    "India_recall": true,
+    "US_recall": true
+  }
+}

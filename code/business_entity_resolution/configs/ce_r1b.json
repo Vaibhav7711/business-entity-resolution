@@ -1,0 +1,26 @@
+{
+  "backbone": "intfloat/multilingual-e5-small",
+  "allowed_licenses": [
+    "mit",
+    "apache-2.0"
+  ],
+  "max_length": 128,
+  "train_s1": 331000,
+  "neg_top": 16,
+  "neg_random": 4,
+  "max_train_pairs": 8000000,
+  "epochs": 1,
+  "lr": 5e-05,
+  "warmup": 0.05,
+  "weight_decay": 0.01,
+  "freeze_word_embeddings": true,
+  "batch_size": 128,
+  "score_batch_size": 1024,
+  "train_minutes": 115,
+  "seed": 20260928,
+  "log_every": 200,
+  "test_budget_minutes": 200,
+  "min_k": 10,
+  "max_k": 40,
+  "purpose": "Round 1b: e5-small on all 331k fold-0 train S1 with more hard negatives and another seed; scored alone and averaged with round 1."
+}

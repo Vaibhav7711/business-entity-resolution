@@ -1,0 +1,260 @@
+{
+  "fold_s1": 441467,
+  "fold_s1_by_country_key": {
+    "us": 264681,
+    "india": 176786
+  },
+  "shards": 18,
+  "components": {
+    "2/india/address_char": {
+      "fit_seconds": 137.5190829578787,
+      "query_seconds_per_s1": 0.00913425392896092,
+      "remaining_queries": 146615,
+      "projected_seconds": 1476.7377227524842,
+      "bytes_per_s1": 810.0992343641245,
+      "projected_new_bytes": 118772699.24629612
+    },
+    "2/india/exact_name": {
+      "fit_seconds": 0.44038587529212236,
+      "query_seconds_per_s1": 1.0354990503662427e-06,
+      "remaining_queries": 146615,
+      "projected_seconds": 0.592205568561569,
+      "bytes_per_s1": 21.688442544164925,
+      "projected_new_bytes": 3179851.0036127404
+    },
+    "2/india/name_char": {
+      "fit_seconds": 41.57807054184377,
+      "query_seconds_per_s1": 0.002062521658457253,
+      "remaining_queries": 146615,
+      "projected_seconds": 343.97468349655395,
+      "bytes_per_s1": 810.0992343641245,
+      "projected_new_bytes": 118772699.24629612
+    },
+    "2/india/name_word": {
+      "fit_seconds": 17.50921329203993,
+      "query_seconds_per_s1": 0.0010154047664629642,
+      "remaining_queries": 146615,
+      "projected_seconds": 166.38278312700743,
+      "bytes_per_s1": 810.0992343641245,
+      "projected_new_bytes": 118772699.24629612
+    },
+    "2/india/rare_name": {
+      "fit_seconds": 7.080833291634917,
+      "query_seconds_per_s1": 3.227024436034545e-05,
+      "remaining_queries": 146615,
+      "projected_seconds": 11.812135168526964,
+      "bytes_per_s1": 172.55516887076993,
+      "projected_new_bytes": 25299176.083987933
+    },
+    "2/india/suffix_exact": {
+      "fit_seconds": 2.816859332844615,
+      "query_seconds_per_s1": 4.5044468770423535e-06,
+      "remaining_queries": 146615,
+      "projected_seconds": 3.47727881172218,
+      "bytes_per_s1": 42.066686553312785,
+      "projected_new_bytes": 6167607.249013954
+    },
+    "2/us/address_char": {
+      "fit_seconds": 108.52071962412447,
+      "query_seconds_per_s1": 0.01655146854531016,
+      "remaining_queries": 219852,
+      "projected_seconds": 3747.394182247654,
+      "bytes_per_s1": 810.0667871244061,
+      "projected_new_bytes": 178094803.28287494
+    },
+    "2/us/exact_name": {
+      "fit_seconds": 0.712029792368412,
+      "query_seconds_per_s1": 1.1895645133348734e-05,
+      "remaining_queries": 219852,
+      "projected_seconds": 3.327311166225398,
+      "bytes_per_s1": 43.475116554016374,
+      "projected_new_bytes": 9558091.324633608
+    },
+    "2/us/name_char": {
+      "fit_seconds": 64.58864312525839,
+      "query_seconds_per_s1": 0.007532350393534657,
+      "remaining_queries": 219852,
+      "projected_seconds": 1720.59094184464,
+      "bytes_per_s1": 810.0667871244061,
+      "projected_new_bytes": 178094803.28287494
+    },
+    "2/us/name_word": {
+      "fit_seconds": 23.405379999428988,
+      "query_seconds_per_s1": 0.001211379472508755,
+      "remaining_queries": 219852,
+      "projected_seconds": 289.7295797894238,
+      "bytes_per_s1": 810.0667871244061,
+      "projected_new_bytes": 178094803.28287494
+    },
+    "2/us/rare_name": {
+      "fit_seconds": 9.541302000172436,
+      "query_seconds_per_s1": 6.808120764487986e-05,
+      "remaining_queries": 219852,
+      "projected_seconds": 24.509091663314564,
+      "bytes_per_s1": 184.1083673514912,
+      "projected_new_bytes": 40476592.77896005
+    },
+    "2/us/suffix_exact": {
+      "fit_seconds": 2.292713833041489,
+      "query_seconds_per_s1": 1.574527743496043e-05,
+      "remaining_queries": 219852,
+      "projected_seconds": 5.75434456767241,
+      "bytes_per_s1": 50.50574404961074,
+      "projected_new_bytes": 11103788.84079502
+    },
+    "3/india/address_char": {
+      "fit_seconds": 115.89174191746861,
+      "query_seconds_per_s1": 0.01048979341226538,
+      "remaining_queries": 146615,
+      "projected_seconds": 1653.8528030567575,
+      "bytes_per_s1": 810.0992343641245,
+      "projected_new_bytes": 118772699.24629612
+    },
+    "3/india/exact_name": {
+      "fit_seconds": 0.9770712917670608,
+      "query_seconds_per_s1": 2.0199943376956133e-06,
+      "remaining_queries": 146615,
+      "projected_seconds": 1.2732327615883032,
+      "bytes_per_s1": 25.509197573829173,
+      "projected_new_bytes": 3740031.002286964
+    },
+    "3/india/name_char": {
+      "fit_seconds": 44.861735499463975,
+      "query_seconds_per_s1": 0.002273213757964287,
+      "remaining_queries": 146615,
+      "projected_seconds": 378.1489706233979,
+      "bytes_per_s1": 810.0992343641245,
+      "projected_new_bytes": 118772699.24629612
+    },
+    "3/india/name_word": {
+      "fit_seconds": 18.59125216677785,
+      "query_seconds_per_s1": 0.0018311778169812691,
+      "remaining_queries": 146615,
+      "projected_seconds": 287.0693878034866,
+      "bytes_per_s1": 810.0992343641245,
+      "projected_new_bytes": 118772699.24629612
+    },
+    "3/india/rare_name": {
+      "fit_seconds": 11.47504850011319,
+      "query_seconds_per_s1": 4.632977164936296e-05,
+      "remaining_queries": 146615,
+      "projected_seconds": 18.267687970484538,
+      "bytes_per_s1": 171.66212588246992,
+      "projected_new_bytes": 25168242.58625833
+    },
+    "3/india/suffix_exact": {
+      "fit_seconds": 3.7189102079719305,
+      "query_seconds_per_s1": 0.00017468530621985495,
+      "remaining_queries": 146615,
+      "projected_seconds": 29.330396379395964,
+      "bytes_per_s1": 57.10271452719499,
+      "projected_new_bytes": 8372114.490404693
+    },
+    "3/us/address_char": {
+      "fit_seconds": 107.63637029193342,
+      "query_seconds_per_s1": 0.008924207494000885,
+      "remaining_queries": 219852,
+      "projected_seconds": 2069.6412362630163,
+      "bytes_per_s1": 810.0667871244061,
+      "projected_new_bytes": 178094803.28287494
+    },
+    "3/us/exact_name": {
+      "fit_seconds": 1.702406500466168,
+      "query_seconds_per_s1": 2.2573070271345067e-05,
+      "remaining_queries": 219852,
+      "projected_seconds": 6.665141145761924,
+      "bytes_per_s1": 44.2031274398269,
+      "projected_new_bytes": 9718145.973900823
+    },
+    "3/us/name_char": {
+      "fit_seconds": 65.91949404217303,
+      "query_seconds_per_s1": 0.0072795128627507,
+      "remaining_queries": 219852,
+      "projected_seconds": 1666.33495594364,
+      "bytes_per_s1": 810.0667871244061,
+      "projected_new_bytes": 178094803.28287494
+    },
+    "3/us/name_word": {
+      "fit_seconds": 18.850124250166118,
+      "query_seconds_per_s1": 0.0011697812669638815,
+      "remaining_queries": 219852,
+      "projected_seconds": 276.0288753547094,
+      "bytes_per_s1": 810.0667871244061,
+      "projected_new_bytes": 178094803.28287494
+    },
+    "3/us/rare_name": {
+      "fit_seconds": 14.308793334290385,
+      "query_seconds_per_s1": 7.07370637979787e-05,
+      "remaining_queries": 219852,
+      "projected_seconds": 29.860478284403598,
+      "bytes_per_s1": 185.6452296504495,
+      "projected_new_bytes": 40814475.029110625
+    },
+    "3/us/suffix_exact": {
+      "fit_seconds": 2.4951160419732332,
+      "query_seconds_per_s1": 5.316232240331142e-06,
+      "remaining_queries": 219852,
+      "projected_seconds": 3.6639003324745154,
+      "bytes_per_s1": 50.80831604541703,
+      "projected_new_bytes": 11170309.899217024
+    }
+  },
+  "scan_seconds": 294.51547837629914,
+  "evaluation_seconds": 134.51522103171996,
+  "projected_wall_seconds": 14643.450025530921,
+  "headroom_factor": 1.25,
+  "projected_wall_seconds_with_headroom": 18304.312531913652,
+  "projected_new_shard_bytes": 1975973441.4372084,
+  "projected_new_shard_bytes_with_headroom": 2469966801.7965107,
+  "current_work_dir_bytes": 450221244,
+  "observed_peak_stage_rss_bytes": 2197749760,
+  "free_disk_bytes": 16958226432,
+  "benchmark_invocations": [
+    {
+      "finished": "2026-09-25T15:13:08",
+      "fits": [
+        "S2/india/exact_name",
+        "S2/india/name_char",
+        "S2/india/address_char",
+        "S2/india/name_word",
+        "S2/india/rare_name",
+        "S2/india/suffix_exact",
+        "S2/us/exact_name",
+        "S2/us/name_char",
+        "S2/us/address_char",
+        "S2/us/name_word",
+        "S2/us/rare_name",
+        "S2/us/suffix_exact",
+        "S3/india/exact_name",
+        "S3/india/name_char",
+        "S3/india/address_char",
+        "S3/india/name_word",
+        "S3/india/rare_name",
+        "S3/india/suffix_exact",
+        "S3/us/exact_name",
+        "S3/us/name_char",
+        "S3/us/address_char",
+        "S3/us/name_word",
+        "S3/us/rare_name",
+        "S3/us/suffix_exact"
+      ],
+      "invocation_id": "7f970a32628d",
+      "partitions_scanned": [
+        "S2/india",
+        "S2/us",
+        "S3/india",
+        "S3/us"
+      ],
+      "partitions_skipped": [],
+      "peak_rss": 2204516352,
+      "pid": 80078,
+      "scope": "benchmark",
+      "started": "2026-09-25T14:31:53",
+      "status": "complete",
+      "stop_after_tasks": null,
+      "tasks_completed": 48,
+      "tasks_skipped": 24,
+      "wall_seconds": 2478.483783000149
+    }
+  ]
+}

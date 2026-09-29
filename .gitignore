@@ -1,0 +1,10 @@
+# Created at the repository root by code/business_entity_resolution/setup_layout.sh
+/configs/
+/artifacts/
+/student_resource
+
+# Pipeline outputs and caches
+output/
+__pycache__/
+.pytest_cache/
+.DS_Store

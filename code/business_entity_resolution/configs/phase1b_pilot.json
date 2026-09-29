@@ -1,0 +1,19 @@
+{
+  "seed": 20260925,
+  "validation_fold": 0,
+  "sample_size": 25000,
+  "name_char_top_k_per_source": 200,
+  "word_name_top_k_per_source": 100,
+  "word_hash_features": 262144,
+  "word_max_document_frequency": 0.1,
+  "rare_name_max_document_frequency": 128,
+  "rare_name_max_query_tokens": 2,
+  "rare_name_top_k_per_source": 100,
+  "address_digit_max_document_frequency": 128,
+  "address_digit_max_query_tokens": 2,
+  "address_digit_top_k_per_source": 100,
+  "query_batch_size": 64,
+  "threads": 4,
+  "legal_suffix_source": "student_resource/README.md:38",
+  "legal_suffix_spellings": ["corp", "corporation", "pvt", "private", "ltd", "limited"]
+}

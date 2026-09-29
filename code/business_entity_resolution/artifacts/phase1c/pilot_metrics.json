@@ -1,0 +1,377 @@
+{
+  "status": "complete",
+  "scope": "pilot",
+  "run_id": "phase1c_fold0_bce_v1",
+  "state": {
+    "run_id": "phase1c_fold0_bce_v1",
+    "algorithm_sha256": "ebf51b17a41f5e0115ff8289e6c0418e5a52f4eeb2f3b480be9bfc29dc2a3a22",
+    "order_sha256": "514d361ec431fb5a2821e062ca635da5548b3fc47f725273a1162aacda8e2dd3",
+    "fold_size": 441467,
+    "shard_size": 25000
+  },
+  "shards": [
+    0
+  ],
+  "n_shards_in_fold": 18,
+  "fold_size": 441467,
+  "retrieval_pool_sizes_by_country_key": {
+    "india": 4133346,
+    "us": 6186873
+  },
+  "metrics": {
+    "selected_bce": {
+      "evaluated_s1": 25000,
+      "true_links": 86372,
+      "retrieved_true_links": 84465,
+      "positive_link_recall": 0.9779210855369795,
+      "positive_s1_with_every_true_match_pct": 93.5,
+      "all_s1_every_match_pct": 93.864,
+      "zero_candidate_rate": 0.0,
+      "candidate_count": {
+        "mean": 544.75984,
+        "median": 541.0,
+        "p90": 638.0,
+        "p95": 677.0,
+        "p99": 729.0,
+        "max": 791,
+        "total": 13618996
+      },
+      "candidate_reduction_ratio": 0.9998982745008818,
+      "recall_by_country": {
+        "India": 0.9615384615384616,
+        "US": 0.9891363707286628
+      },
+      "recall_by_source": {
+        "S2": 0.9779029255953802,
+        "S3": 0.9779381999730131
+      },
+      "non_ascii_recall": 0.9376732837972718,
+      "missing_target_address_recall": 0.8894858019953953,
+      "by_match_count_bucket": {
+        "0": {
+          "s1": 1400,
+          "true_links": 0,
+          "link_recall": null,
+          "every_match_pct": 100.0,
+          "zero_candidate_rate": 0.0,
+          "candidate_mean": 548.345
+        },
+        "1": {
+          "s1": 1320,
+          "true_links": 1320,
+          "link_recall": 0.9742424242424242,
+          "every_match_pct": 97.42424242424242,
+          "zero_candidate_rate": 0.0,
+          "candidate_mean": 544.7719696969697
+        },
+        "2": {
+          "s1": 4224,
+          "true_links": 8448,
+          "link_recall": 0.9754971590909091,
+          "every_match_pct": 95.5965909090909,
+          "zero_candidate_rate": 0.0,
+          "candidate_mean": 547.4867424242424
+        },
+        "3": {
+          "s1": 6067,
+          "true_links": 18201,
+          "link_recall": 0.9752211416955112,
+          "every_match_pct": 93.85198615460689,
+          "zero_candidate_rate": 0.0,
+          "candidate_mean": 545.5895829899456
+        },
+        "4": {
+          "s1": 5535,
+          "true_links": 22140,
+          "link_recall": 0.9787262872628726,
+          "every_match_pct": 92.97199638663052,
+          "zero_candidate_rate": 0.0,
+          "candidate_mean": 543.4485998193315
+        },
+        "5": {
+          "s1": 3731,
+          "true_links": 18655,
+          "link_recall": 0.9793084963816671,
+          "every_match_pct": 92.17367997855803,
+          "zero_candidate_rate": 0.0,
+          "candidate_mean": 544.0013401232914
+        },
+        "6+": {
+          "s1": 2723,
+          "true_links": 17608,
+          "link_recall": 0.9796683325761018,
+          "every_match_pct": 90.45170767535807,
+          "zero_candidate_rate": 0.0,
+          "candidate_mean": 540.5365405802423
+        }
+      },
+      "by_country": {
+        "India": {
+          "s1": 10125,
+          "true_links": 35100,
+          "link_recall": 0.9615384615384616,
+          "positive_every_match_pct": 89.24506630468832,
+          "candidate_count": {
+            "mean": 549.5107160493827,
+            "median": 543.0,
+            "p90": 605.0,
+            "p95": 647.0,
+            "p99": 710.7600000000002,
+            "max": 781,
+            "total": 5563796
+          },
+          "zero_candidate_rate": 0.0,
+          "non_ascii_recall": 0.9279076316530555,
+          "missing_target_address_recall": 0.9142259414225942
+        },
+        "US": {
+          "s1": 14875,
+          "true_links": 51272,
+          "link_recall": 0.9891363707286628,
+          "positive_every_match_pct": 96.40590458532411,
+          "candidate_count": {
+            "mean": 541.5260504201681,
+            "median": 539.0,
+            "p90": 655.0,
+            "p95": 691.0,
+            "p99": 735.0,
+            "max": 791,
+            "total": 8055200
+          },
+          "zero_candidate_rate": 0.0,
+          "non_ascii_recall": 0.9738903394255874,
+          "missing_target_address_recall": 0.8751515151515151
+        }
+      },
+      "positive_s1": 23600,
+      "singleton_s1": 1400,
+      "cross_country_true_links": 0,
+      "cross_country_true_links_retrieved": 0,
+      "non_ascii_true_links": 18034,
+      "missing_target_address_true_links": 3909,
+      "candidate_count_by_source": {
+        "S2": {
+          "mean": 273.21384,
+          "median": 272.0,
+          "p90": 319.0,
+          "p95": 340.0,
+          "p99": 366.0,
+          "max": 396,
+          "total": 6830346
+        },
+        "S3": {
+          "mean": 271.546,
+          "median": 270.0,
+          "p90": 320.0,
+          "p95": 341.0,
+          "p99": 367.0,
+          "max": 437,
+          "total": 6788650
+        }
+      },
+      "recall_at_k_rrf": {
+        "10": 0.6481845968600936,
+        "20": 0.7090144954383365,
+        "50": 0.8063377020330663,
+        "100": 0.936136710971148,
+        "200": 0.9669453063492799
+      }
+    },
+    "phase1a_union_fallback": {
+      "evaluated_s1": 25000,
+      "true_links": 86372,
+      "retrieved_true_links": 84038,
+      "positive_link_recall": 0.9729773537720557,
+      "positive_s1_with_every_true_match_pct": 92.03813559322033,
+      "all_s1_every_match_pct": 92.484,
+      "zero_candidate_rate": 0.0,
+      "candidate_count": {
+        "mean": 397.63724,
+        "median": 397.0,
+        "p90": 399.0,
+        "p95": 400.0,
+        "p99": 416.0,
+        "max": 698,
+        "total": 9940931
+      },
+      "candidate_reduction_ratio": 0.9999257473775839,
+      "recall_by_country": {
+        "India": 0.9544444444444444,
+        "US": 0.9856646902792947
+      },
+      "recall_by_source": {
+        "S2": 0.9746575669355224,
+        "S3": 0.971393873971124
+      },
+      "non_ascii_recall": 0.9332372185871133,
+      "missing_target_address_recall": 0.8349961627014582
+    },
+    "route_contributions": {
+      "route_alone": {
+        "exact_name": {
+          "retrieved_true_links": 18867,
+          "link_recall": 0.21843884592228963,
+          "candidate_total": 249355,
+          "candidate_mean": 9.9742,
+          "candidate_median": 1.0
+        },
+        "name_char": {
+          "retrieved_true_links": 62908,
+          "link_recall": 0.7283378872782846,
+          "candidate_total": 4999400,
+          "candidate_mean": 199.976,
+          "candidate_median": 200.0
+        },
+        "address_char": {
+          "retrieved_true_links": 77832,
+          "link_recall": 0.9011253647015236,
+          "candidate_total": 4999900,
+          "candidate_mean": 199.996,
+          "candidate_median": 200.0
+        },
+        "name_word": {
+          "retrieved_true_links": 60547,
+          "link_recall": 0.7010026397443616,
+          "candidate_total": 4988308,
+          "candidate_mean": 199.53232,
+          "candidate_median": 200.0
+        },
+        "rare_name": {
+          "retrieved_true_links": 28748,
+          "link_recall": 0.3328393460843792,
+          "candidate_total": 1021190,
+          "candidate_mean": 40.8476,
+          "candidate_median": 0.0
+        },
+        "suffix_exact": {
+          "retrieved_true_links": 26522,
+          "link_recall": 0.3070671050803501,
+          "candidate_total": 428598,
+          "candidate_mean": 17.14392,
+          "candidate_median": 2.0
+        }
+      },
+      "unique_true_links": {
+        "exact_name": 0,
+        "name_char": 359,
+        "address_char": 17414,
+        "name_word": 265,
+        "rare_name": 72,
+        "suffix_exact": 4
+      },
+      "cumulative": {
+        "phase1a_union": {
+          "retrieved_true_links": 84038,
+          "link_recall": 0.9729773537720557,
+          "candidate_total": 9940931,
+          "marginal_true_links": 84038,
+          "marginal_candidates": 9940931
+        },
+        "plus_B_name_word": {
+          "retrieved_true_links": 84389,
+          "link_recall": 0.97704117074978,
+          "candidate_total": 13074215,
+          "marginal_true_links": 351,
+          "marginal_candidates": 3133284
+        },
+        "plus_C_rare_name": {
+          "retrieved_true_links": 84461,
+          "link_recall": 0.9778747742323901,
+          "candidate_total": 13600619,
+          "marginal_true_links": 72,
+          "marginal_candidates": 526404
+        },
+        "plus_E_suffix_exact": {
+          "retrieved_true_links": 84465,
+          "link_recall": 0.9779210855369795,
+          "candidate_total": 13618996,
+          "marginal_true_links": 4,
+          "marginal_candidates": 18377
+        }
+      }
+    }
+  },
+  "evaluation_seconds": 8.436149916611612,
+  "evaluation_peak_rss": 785530880,
+  "invocation": {
+    "invocation_id": "8de783cb2546",
+    "scope": "pilot",
+    "started": "2026-09-25T13:57:12",
+    "pid": 71616,
+    "stop_after_tasks": null,
+    "tasks_completed": 16,
+    "tasks_skipped": 8,
+    "partitions_scanned": [
+      "S2/us",
+      "S3/india",
+      "S3/us"
+    ],
+    "partitions_skipped": [
+      "S2/india"
+    ],
+    "fits": [
+      "S2/us/address_char",
+      "S2/us/name_word",
+      "S2/us/rare_name",
+      "S2/us/suffix_exact",
+      "S3/india/exact_name",
+      "S3/india/name_char",
+      "S3/india/address_char",
+      "S3/india/name_word",
+      "S3/india/rare_name",
+      "S3/india/suffix_exact",
+      "S3/us/exact_name",
+      "S3/us/name_char",
+      "S3/us/address_char",
+      "S3/us/name_word",
+      "S3/us/rare_name",
+      "S3/us/suffix_exact"
+    ],
+    "status": "complete",
+    "finished": "2026-09-25T14:27:03",
+    "wall_seconds": 1800.75666154176,
+    "peak_rss": 1989410816
+  },
+  "config_path": "configs/phase1c_fold0.json",
+  "config_sha256": "d8ebabdc9e3ffcefb2f12661ae1ee627d2317c646022f8dd2ca2a00a7a883786",
+  "environment": {
+    "python": "3.12.1",
+    "platform": "macOS-15.0-arm64-arm-64bit",
+    "machine": "arm64",
+    "cpu_count": 8,
+    "memory_bytes": 8589934592,
+    "packages": {
+      "numpy": "2.4.2",
+      "scipy": "1.17.1",
+      "scikit-learn": "1.8.0",
+      "psutil": "7.2.2",
+      "sparse-dot-topn": "1.2.0"
+    }
+  },
+  "code_state": {
+    "git_commit": null,
+    "note": "Repository has no commits; source files are identified by SHA-256.",
+    "files": {
+      "code/business_entity_resolution/src/__init__.py": "ba1d426a3ab2677d4b4ad2ca7e35882f82b5edbfe33a3638dbb409c47c3c5ae1",
+      "code/business_entity_resolution/src/audit_data.py": "7af29dd1c17f024ec51bd7f8a67b2dfe931cbe0e7f2fcd6da87e62595b004485",
+      "code/business_entity_resolution/src/blocking.py": "fffe8bdcf62c4cb6e3b6091bdd7e98131b0333e37e317ffb2a27908e51778f47",
+      "code/business_entity_resolution/src/check_phase1a_reproduction.py": "4b6cf80ca3145dd16f7edd4e83b3865e9c8f43e38fe28ab15717ffe6b43edabd",
+      "code/business_entity_resolution/src/evaluate_blocking.py": "435018e2bc0e44ced837f5b8120823a33d85ebb63b5356e5e6c12b07953d71f3",
+      "code/business_entity_resolution/src/evaluate_phase1b.py": "87e0be3498e8f8f4794838e36b9e0585ad5bec3a6389eda29f678ad1aab4bc43",
+      "code/business_entity_resolution/src/evaluate_phase1c.py": "d10b82d884192f8f287bb08d0fb45e323d85b1a04572f0a47a369a524c54d612",
+      "code/business_entity_resolution/src/make_empty_submission.py": "5d78d5f4346737d9ecadf75154ff23f3464b927064e713ed247479f87be698ed",
+      "code/business_entity_resolution/src/make_folds.py": "af2fb6ae320cc2833a81b8bf9629ffb3759ab081c611ef07b7593f9a279f7bd3",
+      "code/business_entity_resolution/src/metrics.py": "030f203be747d9ed689da85d5225ad0d51f90bf6b6848ba6695bbb9e6168a0e9",
+      "code/business_entity_resolution/src/normalization.py": "4afbc92af0ebba347c6f72b280f562ddd25d85aee7225e02d158620138eb4f30",
+      "code/business_entity_resolution/src/phase1b_routes.py": "dcfa15b9b1e23a1d4e52fcbe0b2d6fa1f30ae3663a329f333fa170937bc503f6",
+      "code/business_entity_resolution/src/score.py": "3c076c0010c32931afc92f71cda5d13ff086a70b217c89aabf85ee076bee0efe"
+    }
+  },
+  "input_sha256": {
+    "student_resource/dataset/train/train_source1.tsv": "591af0e1dfeb65cab71ea6ee8cb69df00f92d6ba6fa79e05746c938775d14973",
+    "student_resource/dataset/train/train_source2.tsv": "6336c1a055eec79cf8a6d99fdc8d32a2e4d9dc2662e00963cb35d66b89ed09ed",
+    "student_resource/dataset/train/train_source3.tsv": "67da22f5151898ff3006febd836c1a159e97ae95efa7257a5aff4fda685e58e9",
+    "student_resource/dataset/train/train_ground_truth.tsv": "70bc1d8a16c667e0155c2105d0ab2ebe41d7e7a85d8a529e3ca81c6c3a5af037",
+    "artifacts/folds.tsv": "23b454f6046c8f0ae13eb5862f6b2294f676de18ee4fe58ffad36b9c2d8c7167"
+  }
+}
