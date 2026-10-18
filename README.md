@@ -11,7 +11,7 @@ businesses share a name or a building, and the test set contains a country (Fran
 | Training data | 2.21M source-1 records, 5.03M + 5.29M target records, 7.64M true links (US, India) |
 | Test data | 1,732,544 source-1 records (US, India and France; France is 15% and absent from training) |
 | Metric | macro F0.5 per source-1 record, singletons included (precision weighted 2× over recall) |
-| Result | macro F0.5 **0.9887** validation / **0.9884** holdout (out of fold); **0.9835** on the hidden test set (public split) |
+| Result | macro F0.5 **0.989** validation / **0.9884** holdout (out of fold); **0.9875** on the hidden test set (public split) |
 
 ## Approach
 
@@ -41,7 +41,7 @@ What made the difference, measured on the holdout split:
 | Fine-tuned cross-encoder, calibrated threshold | 0.9731 | 0.9721 |
 | + corpus-context GBM stacker, one owner (cross-encoder trained on all 331k fold-0 records) | 0.9808 | 0.9808 |
 | + dense retrieval route | 0.9871 | 0.9872 |
-| + reranker, sibling, address and consensus features (final) | **0.9887** | **0.9884** |
+| + reranker, sibling, address and consensus features (final) | **0.9887** | **0.9887** |
 | Ceiling: perfect decisions on the final candidate lists | 0.9992 | 0.9993 |
 
 Tried and rejected on validation evidence: expected-F0.5 set decoding, stacker bagging, a second-stage stacker,
